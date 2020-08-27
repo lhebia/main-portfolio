@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+
+import dp from '../assets/dp.png';
 
 const FlexedHeader = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
+`;
+
+const FlexedDiv = styled.div`
+    display: flex;
     align-items: center;
 `;
 
@@ -19,9 +27,14 @@ const FlexedUl = styled.ul`
 const Header = () => {
     return (
         <FlexedHeader>
-            <div>
+            <FlexedDiv>
+                <img css={css`
+                    width: 3rem;
+                    height: 3rem;
+                    padding-right: 1rem;
+                `} src={dp} alt="Logo for LawrenceHebia.com" />
                 <h1>Lawrence Hebia</h1>
-            </div>
+            </FlexedDiv>
             <nav>
                 <FlexedUl>
                     <li>
