@@ -1,15 +1,34 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { Global } from '@emotion/core';
 
 import dp from '../assets/dp.png';
+import setup from '../styles/setup';
 
 const FlexedHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 0;
 `;
+
+const HeaderH1 = styled.h1`
+  text-transform: lowercase;
+  font-size: 1.5rem;
+  @media (max-width: 500px) {
+    font-size: 0;
+  }
+`;
+
+const HeaderImg = styled.img`
+  width: 3rem;
+  padding-right: 1rem;
+  padding-bottom: 0.2rem;
+  &:hover {
+      opacity: 0.6;
+  }
+`
 
 const FlexedDiv = styled.div`
     display: flex;
@@ -19,6 +38,7 @@ const FlexedDiv = styled.div`
 const FlexedUl = styled.ul`
     display: flex;
     list-style-type: none;
+    font-size: 1.2rem;
     li {
         padding: 0 0.5rem;
     }
@@ -27,17 +47,16 @@ const FlexedUl = styled.ul`
 const Header = () => {
     return (
         <FlexedHeader>
+            <Global
+                styles={setup}
+            />
             <FlexedDiv>
-                <img css={css`
-                    width: 2rem;
-                    height: 2rem;
-                    padding-right: 1rem;
-                    padding-bottom: 0.2rem;
-                `} src={dp} alt="Logo for LawrenceHebia.com" />
-                <h1 css={css`
-                    text-transform: lowercase;
-                    font-size: 2rem;
-                `}>Lawrence Hebia</h1>
+                <Link to="/">
+                    <HeaderImg src={dp} alt="Logo for LawrenceHebia.com" />
+                </Link>
+                <Link to="/">
+                    <HeaderH1>Lawrence Hebia</HeaderH1>
+                </Link>
             </FlexedDiv>
             <nav>
                 <FlexedUl>
