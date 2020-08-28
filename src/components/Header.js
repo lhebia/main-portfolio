@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { Global } from '@emotion/core';
 
-import dp from '../assets/dp.png';
+import dp36 from '../assets/dp36.png';
 import setup from '../styles/setup';
 
 const FlexedHeader = styled.div`
@@ -22,9 +22,10 @@ const HeaderH1 = styled.h1`
 `;
 
 const HeaderImg = styled.img`
-  width: 3rem;
+//   width: 3rem;
   padding-right: 1rem;
   padding-bottom: 0.2rem;
+  transition: all .2s;
   &:hover {
       opacity: 0.6;
   }
@@ -52,7 +53,7 @@ const Header = () => {
             />
             <FlexedDiv>
                 <Link to="/">
-                    <HeaderImg src={dp} alt="Logo for LawrenceHebia.com" />
+                    <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
                 </Link>
                 <Link to="/">
                     <HeaderH1>Lawrence Hebia</HeaderH1>

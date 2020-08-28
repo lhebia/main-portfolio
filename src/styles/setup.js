@@ -312,6 +312,7 @@ const setup = css`
     text-decoration: none;
     &:hover {
       color: #e0d8de;
+      transition: all .1s;
     }
     &:focus {
       text-decoration: underline;
