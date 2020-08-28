@@ -29,11 +29,15 @@ const Header = () => {
         <FlexedHeader>
             <FlexedDiv>
                 <img css={css`
-                    width: 3rem;
-                    height: 3rem;
+                    width: 2rem;
+                    height: 2rem;
                     padding-right: 1rem;
+                    padding-bottom: 0.2rem;
                 `} src={dp} alt="Logo for LawrenceHebia.com" />
-                <h1>Lawrence Hebia</h1>
+                <h1 css={css`
+                    text-transform: lowercase;
+                    font-size: 2rem;
+                `}>Lawrence Hebia</h1>
             </FlexedDiv>
             <nav>
                 <FlexedUl>
