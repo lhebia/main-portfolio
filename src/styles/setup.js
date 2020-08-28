@@ -306,13 +306,15 @@ const setup = css`
   h5,
   h6 {
     font-family: "Poppins", sans-serif;
+    // color: #e0d8de;
   }
   a {
     color: #100b00;
     text-decoration: none;
     &:hover {
-      color: #e0d8de;
-      transition: all .1s;
+      color: #145c9e;
+      // color: #e0d8de;
+      transition: all 0.1s;
     }
     &:focus {
       text-decoration: underline;
