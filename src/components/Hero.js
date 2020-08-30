@@ -4,38 +4,41 @@ import styled from '@emotion/styled';
 import { siteVars } from '../styles/globalStyles';
 
 const HeroContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // padding: 5rem;
-`;
-
-const HeroDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  div {
     text-align: center;
     width: 75%;
     padding: 5rem 0;
     @media (max-width: 500px) {
-        width: 100%;
+      width: 100%;
+      padding: 1rem;
     }
-`;
-
-const HeroH2 = styled.div`
-    font-size: 4rem;
-    line-height: 4.6rem;
-`;
-
-const HeroSub = styled.p`
-    font-size: 2.4rem;
-    line-height: 3rem;
-    color: ${siteVars.mainHighlight};
-    padding: 1rem 0;
-`;
-
-const HeroP = styled.p`
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-`;
+    // @media (max-width: 420px) {
+    //   padding: 1rem;
+    // }
+    h2 {
+      font-size: 4rem;
+      line-height: 4.6rem;
+      @media (max-width: 420px) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+      }
+    }
+    h3 {
+      font-size: 2.4rem;
+      line-height: 3rem;
+      color: ${siteVars.mainHighlight};
+      padding: 1rem 0;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+  }
+`
 
 export default function Hero() {
 
@@ -55,11 +58,11 @@ export default function Hero() {
 
     return (
       <HeroContainer>
-        <HeroDiv>
-          <HeroH2>{data.site.siteMetadata.hero.title}</HeroH2>
-          <HeroSub>{data.site.siteMetadata.hero.subTitle}</HeroSub>
-          <HeroP>{data.site.siteMetadata.hero.desc}</HeroP>
-        </HeroDiv>
+        <div>
+          <h2>{data.site.siteMetadata.hero.title}</h2>
+          <h3>{data.site.siteMetadata.hero.subTitle}</h3>
+          <p>{data.site.siteMetadata.hero.desc}</p>
+        </div>
       </HeroContainer>
     )
 }
