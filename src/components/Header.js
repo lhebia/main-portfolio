@@ -5,12 +5,19 @@ import { Global } from '@emotion/core';
 
 import dp36 from '../assets/dp36.png';
 import setup from '../styles/setup';
+import { Wrapper } from '../styles/globalStyles';
 
 const FlexedHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
 `;
 
 const HeaderH1 = styled.h1`
@@ -62,24 +69,26 @@ const Header = () => {
             <Global
                 styles={setup}
             />
-            <FlexedDiv>
-                <Link to="/">
-                    <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
-                </Link>
-                <Link to="/">
-                    <HeaderH1>{data.site.siteMetadata.title}</HeaderH1>
-                </Link>
-            </FlexedDiv>
-            <nav>
-                <FlexedUl>
-                    <li>
-                        <Link to="/">Portfolio</Link>
-                    </li>
-                    <li>
-                        <Link to="/blog">Blog</Link>
-                    </li>
-                </FlexedUl>
-            </nav>
+            <Wrapper>
+                <FlexedDiv>
+                    <Link to="/">
+                        <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
+                    </Link>
+                    <Link to="/">
+                        <HeaderH1>{data.site.siteMetadata.title}</HeaderH1>
+                    </Link>
+                </FlexedDiv>
+                <nav>
+                    <FlexedUl>
+                        <li>
+                            <Link to="/">Portfolio</Link>
+                        </li>
+                        <li>
+                            <Link to="/blog">Blog</Link>
+                        </li>
+                    </FlexedUl>
+                </nav>
+            </Wrapper>
         </FlexedHeader>
     )
 }
