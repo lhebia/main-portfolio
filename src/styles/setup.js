@@ -1,4 +1,5 @@
 import { css } from '@emotion/core';
+import { siteVars } from '../styles/globalStyles';
 
 const setup = css`
   a,
@@ -309,12 +310,11 @@ const setup = css`
     // color: #e0d8de;
   }
   a {
-    color: #100b00;
+    color: ${siteVars.mainText};
     text-decoration: none;
     &:hover {
-      color: #145c9e;
-      // color: #e0d8de;
-      transition: all 0.1s;
+      color: ${siteVars.mainHighlight};
+      transition: all 0.2s;
     }
     &:focus {
       text-decoration: underline;

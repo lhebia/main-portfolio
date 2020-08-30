@@ -5,3 +5,8 @@ export const Wrapper = styled.div`
     max-width: 1200px;
     margin: 0 auto;
 `;
+
+export const siteVars = {
+  mainText: "#100b00",
+  mainHighlight: "#145c9e",
+};
