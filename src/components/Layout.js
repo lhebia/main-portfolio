@@ -1,14 +1,9 @@
 import React from 'react';
-import styled from '@emotion/styled';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const Wrapper = styled.div`
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-`;
+import { Wrapper } from '../styles/globalStyles';
 
 const Layout = ({ children }) => {
     return (

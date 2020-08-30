@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import { Global } from '@emotion/core';
 
@@ -46,6 +46,17 @@ const FlexedUl = styled.ul`
 `;
 
 const Header = () => {
+
+    const data = useStaticQuery(graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `)
+
     return (
         <FlexedHeader>
             <Global
@@ -56,7 +67,7 @@ const Header = () => {
                     <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
                 </Link>
                 <Link to="/">
-                    <HeaderH1>Lawrence Hebia</HeaderH1>
+                    <HeaderH1>{data.site.siteMetadata.title}</HeaderH1>
                 </Link>
             </FlexedDiv>
             <nav>

@@ -1,11 +1,15 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "lawrence hebia",
+    author: "Lawrence Hebia",
+    desc: "Lawrence Web Developer",
+    hero: {
+      title: "Hi 👋🏻, I'm Lawrence Hebia.",
+      subTitle: "A Front-End Web Developer based in Toronto, Canada",
+      desc:
+        "I am a passionate and dedicated Front-End Web Developer who loves to build things that help to make the world a better place. I believe in code that humans can easily read and interfaces we can easily interpret. I love working with people and I believe in doing great work by doing what you love.",
+    },
+  },
   plugins: [
     `gatsby-plugin-emotion`,
     {
