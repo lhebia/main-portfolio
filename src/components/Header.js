@@ -1,17 +1,14 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import { Global } from '@emotion/core';
+import { Global, css } from '@emotion/core';
 
 import dp36 from '../assets/dp36.png';
 import setup from '../styles/setup';
 import { Wrapper } from '../styles/globalStyles';
 
 const FlexedHeader = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
+    padding: 1.2rem 0;
     position: sticky;
     top: 0;
     background-color: #ffffff;
@@ -69,7 +66,11 @@ const Header = () => {
             <Global
                 styles={setup}
             />
-            <Wrapper>
+            <Wrapper css={css`
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            `}>
                 <FlexedDiv>
                     <Link to="/">
                         <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
