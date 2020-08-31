@@ -1,12 +1,14 @@
-import React from "react";
+import React from 'react';
 
 import Layout from '../components/Layout';
-import Hero from "../components/Hero"
+import Hero from '../components/Hero';
+import Projects from '../components/Projects';
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
+      <Projects />
     </Layout>
   )
 }
