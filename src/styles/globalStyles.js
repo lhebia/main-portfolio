@@ -9,4 +9,5 @@ export const Wrapper = styled.div`
 export const siteVars = {
   mainText: "#100b00",
   mainHighlight: "#145c9e",
+  offWhite: "#fafafa",
 };

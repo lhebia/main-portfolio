@@ -8,10 +8,11 @@ const HeroContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${siteVars.offWhite};
   div {
     text-align: center;
     width: 75%;
-    padding: 5rem 0;
+    padding: 6rem 0;
     @media (max-width: 500px) {
       width: 100%;
       padding: 1rem;
