@@ -9,6 +9,24 @@ module.exports = {
       desc:
         "I am a passionate and dedicated Front-End Web Developer who loves to build things that help to make the world a better place. I believe in code that humans can easily read and interfaces we can easily interpret. I love working with people and I believe in doing great work by doing what you love.",
     },
+    projects: [
+      {
+        title: "Devcompile",
+        tech: ["React", "API", "Firebase"],
+        desc: "A social feed for developers to view and save content from the Dev.to API.",
+        shortDesc: "A social feed for developers.",
+        liveUrl: "https://lhebia.github.io/lawrence-hebia-project-five/",
+        githubUrl: "https://github.com/lhebia/lawrence-hebia-project-five",
+      },
+      {
+        title: "Noah's Ark",
+        tech: ["HTML5", "CSS3", "JQuery"],
+        desc: "A fully accessible memory matching game using unicode and JQuery.",
+        shortDesc: "Test your memory with emojis.",
+        liveUrl: "https://lhebia.github.io/lawrenceHebiaProjectThree/",
+        githubUrl: "https://github.com/lhebia/lawrenceHebiaProjectThree",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-emotion`,
