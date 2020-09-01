@@ -12,6 +12,7 @@ const HeroContainer = styled.div`
   div {
     text-align: center;
     width: 75%;
+    max-width: 1200px;
     padding: 6rem 0;
     @media (max-width: 500px) {
       width: 100%;

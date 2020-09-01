@@ -307,7 +307,6 @@ const setup = css`
   h5,
   h6 {
     font-family: "Poppins", sans-serif;
-    // color: #e0d8de;
   }
   a {
     color: ${siteVars.mainText};
