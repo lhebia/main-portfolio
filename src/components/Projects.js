@@ -1,7 +1,20 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import styled from '@emotion/styled';
 
-import { Wrapper } from '../styles/globalStyles';
+import { Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
+import dc from '../assets/projects/dc.jpg';
+import fp from "../assets/projects/fp.jpg";
+import mw from "../assets/projects/mw.jpg";
+import na from "../assets/projects/na.jpg";
+import pg from "../assets/projects/pg.jpg";
+import ta from "../assets/projects/ta.jpg";
+
+const ProjectUl = styled.ul`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+`;
 
 const Projects = () => {
     const data = useStaticQuery(graphql`
@@ -10,6 +23,7 @@ const Projects = () => {
                 siteMetadata {
                     projects {
                         title
+                        imgName
                         tech
                         desc
                         shortDesc
@@ -25,20 +39,23 @@ const Projects = () => {
 
     return (
         <Wrapper>
-            <h4>Projects</h4>
-            <ul>
-                {
-                    projectList.map( (project) => {
-                        return (
-                            <li>
-                                <p>{ project.title }</p>
-                                <p>{ project.desc }</p>
-                                <p><Link to={project.liveUrl}>Live</Link> | <Link to={project.githubUrl}>Github</Link></p>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
+            <PageSection>
+                <SectionHeader>Projects</SectionHeader>
+                <ProjectUl>
+                    {
+                        projectList.map((project) => {
+                            return (
+                                <li>
+                                    {/* <img src={image} alt={project.desc} /> */}
+                                    <p>{project.title}</p>
+                                    <p>{project.desc}</p>
+                                    <p><Link to={project.liveUrl}>Live</Link> | <Link to={project.githubUrl}>Github</Link></p>
+                                </li>
+                            )
+                        })
+                    }
+                </ProjectUl>
+            </PageSection>
         </Wrapper>
     )
 }

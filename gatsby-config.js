@@ -12,16 +12,20 @@ module.exports = {
     projects: [
       {
         title: "Devcompile",
+        imgName: 'dc',
         tech: ["React", "API", "Firebase"],
-        desc: "A social feed for developers to view and save content from the Dev.to API.",
+        desc:
+          "A social feed for developers to view and save content from the Dev.to API.",
         shortDesc: "A social feed for developers.",
         liveUrl: "https://lhebia.github.io/lawrence-hebia-project-five/",
         githubUrl: "https://github.com/lhebia/lawrence-hebia-project-five",
       },
       {
         title: "Noah's Ark",
+        imgName: 'na',
         tech: ["HTML5", "CSS3", "JQuery"],
-        desc: "A fully accessible memory matching game using unicode and JQuery.",
+        desc:
+          "A fully accessible memory matching game using unicode and JQuery.",
         shortDesc: "Test your memory with emojis.",
         liveUrl: "https://lhebia.github.io/lawrenceHebiaProjectThree/",
         githubUrl: "https://github.com/lhebia/lawrenceHebiaProjectThree",
@@ -33,10 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Roboto`,
-          `Poppins\:400`, 
-        ],
+        fonts: [`Roboto`, `Poppins\:400`],
         display: "swap",
       },
     },
