@@ -11,6 +11,7 @@ const FlexedHeader = styled.div`
     padding: 1.2rem 0;
     position: sticky;
     top: 0;
+    z-index: 1000;
     background-color: #ffffff;
     -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
     -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
