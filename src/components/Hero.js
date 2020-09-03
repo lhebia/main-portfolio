@@ -39,6 +39,23 @@ const HeroContainer = styled.div`
       font-size: 1.2rem;
       line-height: 1.8rem;
     }
+    button {
+      padding: 1rem 1.2rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      border: 1px solid darkgrey;
+      -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+      -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+      box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+      &:hover,
+      &:focus {
+        background-color: ${siteVars.offWhite};
+        border: 1px solid ${siteVars.mainText};
+        -webkit-box-shadow: 0;
+        -moz-box-shadow: 0;
+        box-shadow: 0;
+      }
+    }
   }
 `
 
@@ -64,6 +81,7 @@ export default function Hero() {
           <h2>{data.site.siteMetadata.hero.title}</h2>
           <h3>{data.site.siteMetadata.hero.subTitle}</h3>
           <p>{data.site.siteMetadata.hero.desc}</p>
+          <button>Contact Me</button>
         </div>
       </HeroContainer>
     )
