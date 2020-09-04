@@ -41,7 +41,7 @@ module.exports = {
         githubUrl: "https://github.com/lhebia/Password-generator",
       },
       {
-        title: "Travel Ask",
+        title: "TravelAsk",
         imgName: "ta.jpg",
         tech: ["JQuery", "SASS", "API"],
         desc:

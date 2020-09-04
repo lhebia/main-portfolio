@@ -15,10 +15,10 @@ const ProjectUl = styled.ul`
     img {
         border-radius: 5px 5px 5px 5px;
         transition: all .6s;
-        opacity: 0.86;
+        opacity: 0.46;
         &:hover,
         &:focus {
-            transform: scale(1.2);
+            transform: scale(1.1);
             opacity: 1;
         }
     }
