@@ -20,4 +20,5 @@ export const SectionHeader = styled.h4`
   font-size: 2.6rem;
   line-height: 3.2rem;
   padding-bottom: 2rem;
+  text-align: center;
 `;
