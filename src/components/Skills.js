@@ -7,6 +7,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 const SkillsUl = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+    li {
+        text-align: center;
+    }
 `;
 
 export default function Skills() {
@@ -34,10 +39,13 @@ export default function Skills() {
                     {
                         skills.map((skill) => {
                             return (
-                                <li>
-                                    <p>{skill.skillName}</p>
-                                    { skill.icon }
-                                </li>
+                              <li>
+                                <p>{skill.skillName}</p>
+                              </li>
+                              // <li>
+                              //     <p>{skill.skillName}</p>
+                              //     { skill.icon }
+                              // </li>
                             )
                         })
                     }
