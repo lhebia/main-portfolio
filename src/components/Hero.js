@@ -53,9 +53,9 @@ const HeroContainer = styled.div`
       transition: all 0.2s;
       &:hover,
       &:focus {
-        background-color: ${siteVars.offWhite};
-        border: 1px solid ${siteVars.mainHighlight};
-        color: ${siteVars.mainHighlight};
+        // background-color: ${siteVars.offWhite};
+        // border: 1px solid ${siteVars.mainHighlight};
+        // color: ${siteVars.mainHighlight};
         background-color: ${siteVars.mainHighlight};
         color: ${siteVars.offWhite};
         border: 1px solid ${siteVars.mainHighlight};
