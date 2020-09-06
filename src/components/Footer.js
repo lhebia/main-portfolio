@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { Wrapper } from '../styles/globalStyles';
+import { Wrapper, siteVars } from '../styles/globalStyles';
 
 const FooterP = styled.p`
     text-align: center;
@@ -20,7 +20,10 @@ const FooterUl = styled.ul`
 
 const Footer = () => {
     return (
-        <footer>
+        <footer css={css`
+            background-color: ${siteVars.offWhite};
+            padding: 2rem 0;
+        `}>
             <Wrapper css={css`
                 display: flex;
                 justify-content: space-between;

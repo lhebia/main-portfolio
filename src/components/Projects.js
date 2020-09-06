@@ -11,6 +11,7 @@ const ProjectUl = styled.ul`
     gap: 2rem;
     li {
         padding: 1rem 0;
+        text-align: center;
     }
     img {
         border-radius: 5px 5px 5px 5px;

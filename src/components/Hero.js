@@ -43,17 +43,22 @@ const HeroContainer = styled.div`
       padding: 1rem 1.2rem;
       margin-top: 1rem;
       border-radius: 5px;
-      border: 1px solid darkgrey;
-      -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
-      -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
-      box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+      // background-color: ${siteVars.mainHighlight};
+      // color: ${siteVars.offWhite};
+      // border: 1px solid ${siteVars.mainHighlight};
+      background-color: ${siteVars.offWhite};
+      border: 1px solid ${siteVars.mainHighlight};
+      color: ${siteVars.mainHighlight};
+      opacity: 0.86;
+      transition: all 0.2s;
       &:hover,
       &:focus {
         background-color: ${siteVars.offWhite};
-        border: 1px solid ${siteVars.mainText};
-        -webkit-box-shadow: 0;
-        -moz-box-shadow: 0;
-        box-shadow: 0;
+        border: 1px solid ${siteVars.mainHighlight};
+        color: ${siteVars.mainHighlight};
+        background-color: ${siteVars.mainHighlight};
+        color: ${siteVars.offWhite};
+        border: 1px solid ${siteVars.mainHighlight};
       }
     }
   }
