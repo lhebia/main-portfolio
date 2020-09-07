@@ -6,35 +6,41 @@ import { css } from '@emotion/core';
 import { Wrapper, PageSection, SectionHeader, siteVars } from '../styles/globalStyles';
 
 const ProjectUl = styled.ul`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    li {
-        padding: 1rem 0;
-        text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+  li {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  img {
+    border-radius: 5px 5px 5px 5px;
+    transition: all 0.6s;
+    opacity: 0.46;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      opacity: 1;
     }
-    img {
-        border-radius: 5px 5px 5px 5px;
-        transition: all .6s;
-        opacity: 0.46;
-        &:hover,
-        &:focus {
-            transform: scale(1.1);
-            opacity: 1;
-        }
+  }
+  p {
+    line-height: 1.4rem;
+  }
+  a {
+    font-weight: bold;
+    color: ${siteVars.mainHighlight};
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
-    p {
-        line-height: 1.4rem;
-    }
-    a {
-        font-weight: bold;
-        color: ${siteVars.mainHighlight};
-        &:hover,
-        &:focus {
-            text-decoration: underline;
-        }
-    }
-`;
+  }
+`
 
 const ProjectTitle = styled.p`
     font-family: "Poppins", sans-serif;
