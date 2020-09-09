@@ -88,7 +88,7 @@ module.exports = {
       },
       { icon: '<i class="fas fa-universal-access"></i>', skillName: 'WCAG' },
       { icon: `<img src="https://img.icons8.com/material-rounded/96/000000/typescript.png" alt="TypeScript logo"/>`, skillName: 'TypeScript' },
-      { icon: '<i class="fab fa-python"></i>', skillName: 'Python3' },
+      { icon: '<i class="fab fa-python"></i>', skillName: 'Python' },
     ],
   },
   plugins: [
