@@ -22,3 +22,26 @@ export const SectionHeader = styled.h4`
   padding-bottom: 2rem;
   text-align: center;
 `;
+
+export const ButtonStyle = styled.button`
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  background-color: ${siteVars.mainHighlight};
+  color: ${siteVars.offWhite};
+  border: 1px solid ${siteVars.mainHighlight};
+  // background-color: ${siteVars.offWhite};
+  // border: 1px solid ${siteVars.mainHighlight};
+  // color: ${siteVars.mainHighlight};
+  opacity: 0.86;
+  transition: all 0.2s;
+  &:hover,
+  &:focus {
+    background-color: ${siteVars.offWhite};
+    border: 1px solid ${siteVars.mainHighlight};
+    color: ${siteVars.mainHighlight};
+    // background-color: ${siteVars.mainHighlight};
+    // color: ${siteVars.offWhite};
+    // border: 1px solid ${siteVars.mainHighlight};
+  }
+`;

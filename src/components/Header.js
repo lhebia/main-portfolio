@@ -7,7 +7,7 @@ import dp36 from '../assets/dp36.png';
 import setup from '../styles/setup';
 import { Wrapper } from '../styles/globalStyles';
 
-const FlexedHeader = styled.div`
+const FlexedHeader = styled.header`
     padding: 1.2rem 0;
     position: sticky;
     top: 0;

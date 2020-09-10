@@ -37,7 +37,32 @@ const ContactForm = () => {
             <textarea id="message" name="message" rows="5" cols="33">
               Your message *
             </textarea>
-            <input type="submit" value="Submit" />
+            <input
+              type="submit"
+              value="Submit"
+              css={css`
+              padding: 1rem 1.2rem;
+              margin-top: 1rem;
+              border-radius: 5px;
+              background-color: ${siteVars.mainHighlight};
+              color: ${siteVars.offWhite};
+              border: 1px solid ${siteVars.mainHighlight};
+              // background-color: ${siteVars.offWhite};
+              // border: 1px solid ${siteVars.mainHighlight};
+              // color: ${siteVars.mainHighlight};
+              opacity: 0.86;
+              transition: all 0.2s;
+              &:hover,
+              &:focus {
+                background-color: ${siteVars.offWhite};
+                border: 1px solid ${siteVars.mainHighlight};
+                color: ${siteVars.mainHighlight};
+                // background-color: ${siteVars.mainHighlight};
+                // color: ${siteVars.offWhite};
+                // border: 1px solid ${siteVars.mainHighlight};
+              }
+            `}
+            />
           </PortfolioForm>
         </PageSection>
       </Wrapper>
