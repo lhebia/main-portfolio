@@ -1,13 +1,17 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-import { Wrapper } from '../styles/globalStyles';
+import Hero from '../components/Hero';
+import { Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
 
 const Blog = () => {
     return (
         <Layout>
+            <Hero />
             <Wrapper>
-                <p>This is the blog!</p>
+                <PageSection>
+                    <SectionHeader>Blog</SectionHeader>
+                </PageSection>
             </Wrapper>
         </Layout>
     )
