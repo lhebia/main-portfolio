@@ -69,7 +69,7 @@ const Footer = () => {
               </Link>
             </li>
           </FooterUl>
-          <FooterP>Handcrafted by me in twenty-twenty. </FooterP>
+          <FooterP>Handcrafted with <span role="img" aria-label="Coffee">☕️</span> and Gatsby in twenty-twenty. </FooterP>
         </Wrapper>
       </footer>
     )
