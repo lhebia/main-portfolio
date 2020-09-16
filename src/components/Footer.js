@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -42,31 +41,31 @@ const Footer = () => {
         >
           <FooterUl>
             <li>
-              <Link
-                to="https://github.com/lhebia"
+              <a
+                href="https://github.com/lhebia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faGithub} />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="https://twitter.com/lhebia"
+              <a
+                href="https://twitter.com/lhebia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faTwitter} />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="https://linkedin.com/in/lhebia"
+              <a
+                href="https://aedin.com/in/lhebia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
-              </Link>
+              </a>
             </li>
           </FooterUl>
           <FooterP>Handcrafted with <span role="img" aria-label="Coffee">☕️</span> and Gatsby in twenty-twenty. </FooterP>
