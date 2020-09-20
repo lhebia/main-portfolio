@@ -68,7 +68,7 @@ const Footer = () => {
               </a>
             </li>
           </FooterUl>
-          <FooterP>Handcrafted with <span role="img" aria-label="Coffee">☕️</span> and Gatsby in twenty-twenty. </FooterP>
+          <FooterP>Handcrafted with <span role="img" aria-label="Coffee">☕️</span> and Gatsby in twenty-twenty.</FooterP>
         </Wrapper>
       </footer>
     )
