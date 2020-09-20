@@ -32,9 +32,6 @@ export default function blogTemplate(props) {
             <h1>{props.data.contentfulBlogPost.title}</h1>
             <p>{props.data.contentfulBlogPost.publishedDate}</p>
             { documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
-            {/* <div
-          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-        ></div> */}
         </Layout>
     )
 }

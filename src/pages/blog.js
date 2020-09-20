@@ -52,7 +52,7 @@ const Blog = () => {
                             posts.map(post => {
                                 return (
                                     <BlogLi>
-                                        <Link to={post.node.slug} key={post.node.slug}>
+                                        <Link to={`/blog/${post.node.slug}`} key={post.node.slug}>
                                             <BlogTitle>{post.node.title}</BlogTitle>
                                             <p>{post.node.publishedDate}</p>
                                         </Link>
