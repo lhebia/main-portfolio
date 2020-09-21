@@ -5,7 +5,7 @@ import { Global, css } from '@emotion/core';
 
 import dp36 from '../assets/dp36.png';
 import setup from '../styles/setup';
-import { Wrapper } from '../styles/globalStyles';
+import { Wrapper, ButtonStyle } from '../styles/globalStyles';
 
 const FlexedHeader = styled.header`
     padding: 1.2rem 0;
@@ -45,6 +45,7 @@ const FlexedUl = styled.ul`
     display: flex;
     list-style-type: none;
     font-size: 1.2rem;
+    align-items: center;
     li {
         padding: 0 0.5rem;
     }
@@ -88,6 +89,9 @@ const Header = () => {
                         <li>
                             <Link to="/blog">Blog</Link>
                         </li>
+                        <ButtonStyle>
+                            Contact Me
+                        </ButtonStyle>
                     </FlexedUl>
                 </nav>
             </Wrapper>
