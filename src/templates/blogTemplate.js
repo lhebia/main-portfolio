@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { css } from '@emotion/core';
 
 import Layout from '../components/Layout';
 import { PageSection, Wrapper } from '../styles/globalStyles';
@@ -31,9 +32,11 @@ export default function blogTemplate(props) {
 
   return (
     <Layout>
-      <Head title="Blog" />
+      <Head title={props.data.contentfulBlogPost.title} />
       <Wrapper>
-        <PageSection>
+        <PageSection css={css`
+          min-height: 80vh;
+        `}>
           <h1>{props.data.contentfulBlogPost.title}</h1>
           <p>{props.data.contentfulBlogPost.publishedDate}</p>
           {documentToReactComponents(

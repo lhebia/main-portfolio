@@ -316,7 +316,7 @@ const setup = css`
       transition: all 0.2s;
     }
     &:focus {
-      transform: scale(1.1);
+      transform: scale(1.01);
     }
   }
 `
