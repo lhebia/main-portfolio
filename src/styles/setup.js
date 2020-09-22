@@ -316,7 +316,7 @@ const setup = css`
       transition: all 0.2s;
     }
     &:focus {
-      text-decoration: underline;
+      transform: scale(1.1);
     }
   }
 `
