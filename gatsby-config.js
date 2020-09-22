@@ -100,7 +100,8 @@ module.exports = {
     ],
   },
   plugins: [
-    `gatsby-plugin-emotion`,
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-emotion",
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -115,6 +116,5 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    'gatsby-plugin-sharp',
   ],
 }
