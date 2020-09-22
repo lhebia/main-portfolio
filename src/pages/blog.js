@@ -3,9 +3,9 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
 import { Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
 import Head from '../components/Head';
+import HeroSplash from '../components/HeroSplash';
 
 const BlogUl = styled.ul`
     text-align: center;
@@ -45,7 +45,7 @@ const Blog = () => {
     return (
         <Layout>
             <Head title="Blog" />
-            <Hero />
+            <HeroSplash />
             <Wrapper>
                 <PageSection>
                     <SectionHeader>Blog</SectionHeader>

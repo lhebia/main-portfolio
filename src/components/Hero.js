@@ -8,7 +8,7 @@ const HeroContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${siteVars.offWhite};
+  // background-color: ${siteVars.offWhite};
   div {
     text-align: center;
     width: 75%;
