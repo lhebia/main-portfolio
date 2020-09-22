@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "lawrence hebia",
+    headTitle: "Lawrence Hebia",
     author: "Lawrence Hebia",
     desc: "Lawrence Web Developer",
     hero: {
@@ -102,6 +103,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sharp",
     "gatsby-plugin-emotion",
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

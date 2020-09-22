@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import { Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
+import Head from '../components/Head';
 
 const BlogUl = styled.ul`
     text-align: center;
@@ -43,6 +44,7 @@ const Blog = () => {
 
     return (
         <Layout>
+            <Head title="Blog" />
             <Hero />
             <Wrapper>
                 <PageSection>

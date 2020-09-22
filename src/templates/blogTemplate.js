@@ -4,6 +4,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Layout from '../components/Layout';
 import { PageSection, Wrapper } from '../styles/globalStyles';
+import Head from '../components/Head';
 
 export const query = graphql`
   query ($slug: String!) {
@@ -30,6 +31,7 @@ export default function blogTemplate(props) {
 
   return (
     <Layout>
+      <Head title="Blog" />
       <Wrapper>
         <PageSection>
           <h1>{props.data.contentfulBlogPost.title}</h1>
