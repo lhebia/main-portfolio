@@ -5,7 +5,7 @@ import { Global, css } from '@emotion/core';
 
 import dp36 from '../assets/dp36.png';
 import setup from '../styles/setup';
-import { Wrapper, ButtonStyle } from '../styles/globalStyles';
+import { Wrapper, siteVars } from '../styles/globalStyles';
 
 const FlexedHeader = styled.header`
     padding: 1.2rem 0;
@@ -42,14 +42,31 @@ const FlexedDiv = styled.div`
 `;
 
 const FlexedUl = styled.ul`
-    display: flex;
-    list-style-type: none;
-    font-size: 1.2rem;
-    align-items: center;
-    li {
-        padding: 0 0.5rem;
-    }
-`;
+  display: flex;
+  list-style-type: none;
+  font-size: 1.2rem;
+  align-items: center;
+  li {
+    padding: 0 0.5rem;
+    position: relative;
+  }
+  a::after {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 0px;
+    width: 10%;
+    z-index: -1;
+    height: 0.2rem;
+    background-color: ${siteVars.mainHighlight};
+    opacity: 0;
+    transition: .2s ease;
+  }
+  a:hover::after {
+    opacity: 1;
+    width: 100%;
+  }
+`
 
 const Header = () => {
 
@@ -89,9 +106,6 @@ const Header = () => {
                         <li>
                             <Link to="/blog">Blog</Link>
                         </li>
-                        <ButtonStyle>
-                            Contact Me
-                        </ButtonStyle>
                     </FlexedUl>
                 </nav>
             </Wrapper>
