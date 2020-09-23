@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
@@ -12,10 +12,11 @@ const FlexedHeader = styled.header`
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #ffffff;
-    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
-    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+    transition: .2s ease;
+    border-bottom: 1px solid ${siteVars.lightGrey};
+    // -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+    // -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
+    // box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
 `;
 
 const HeaderH1 = styled.h1`
@@ -70,6 +71,20 @@ const FlexedUl = styled.ul`
 
 const Header = () => {
 
+  const [colour, setColour] = useState(`${siteVars.lightGrey}`)
+
+  const listenScrollEvent = e => {
+    if (window.scrollY > 0) {
+      setColour(`${siteVars.offWhite}`)
+    } else {
+      setColour(`${siteVars.lightGrey}`)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent)
+  })
+
     const data = useStaticQuery(graphql`
       query {
         site {
@@ -81,7 +96,9 @@ const Header = () => {
     `)
 
     return (
-        <FlexedHeader>
+        <FlexedHeader css={css`
+          background-color: ${colour};
+        `}>
             <Global
                 styles={setup}
             />

@@ -10,6 +10,7 @@ export const siteVars = {
   mainText: "#100b00",
   mainHighlight: "#145c9e",
   offWhite: "#fafafa",
+  lightGrey: "#dbd9d9",
 };
 
 export const PageSection = styled.section`
