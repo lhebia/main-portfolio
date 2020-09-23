@@ -13,7 +13,7 @@ export const siteVars = {
 };
 
 export const PageSection = styled.section`
-  padding: 4rem 0;
+  padding: 6rem 0;
 `;
 
 export const SectionHeader = styled.h4`

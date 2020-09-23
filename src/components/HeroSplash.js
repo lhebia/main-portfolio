@@ -15,6 +15,11 @@ const SplashSection = styled.section`
     place-items: center;
 `;
 
+const SplashTitle = styled.p`
+    font-size: 7rem;
+    color: white;
+`;
+
 const HeroSplash = () => {
 
     const data = useStaticQuery(graphql`
@@ -29,7 +34,7 @@ const HeroSplash = () => {
 
     return (
         <SplashSection>
-            <p>{data.site.siteMetadata.headTitle}</p>
+            <SplashTitle>{data.site.siteMetadata.headTitle}</SplashTitle>
         </SplashSection>
     )
 }
