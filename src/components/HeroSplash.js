@@ -12,6 +12,8 @@ const SplashSection = styled.section`
     background-size: cover;
     display: grid;
     place-items: center;
+    padding: 0 10%;
+    position: relative;
 `;
 
 const SplashTitle = styled.p`
