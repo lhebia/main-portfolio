@@ -27,7 +27,7 @@ const Footer = () => {
         css={css`
           background-color: ${siteVars.offWhite};
           padding: 2rem 0;
-          margin-top: 6rem;
+          margin-top: 2rem;
         `}
       >
         <Wrapper

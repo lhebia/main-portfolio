@@ -17,6 +17,39 @@ export const PageSection = styled.section`
   padding: 6rem 0;
 `;
 
+export const BlogPageSection = styled.section`
+  padding: 2rem 0;
+  h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
+  h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  p:first-of-type {
+    font-size: 0.9rem;
+    line-height: 1rem;
+    padding: 0.5rem 0;
+  }
+  img {
+    padding: 1rem 0;
+  }
+  p {
+    line-height: 1.5rem;
+    padding: 1rem 0;
+  }
+  blockquote {
+    font-size: 1.20112rem;
+    line-height: 1.75rem;
+    color: hsla(0,0%,0%,0.59);
+    font-style: italic;
+    border-left: 0.32813rem solid hsla(0,0%,0%,0.9);
+  }
+`;
+
 export const SectionHeader = styled.h4`
   font-size: 2.6rem;
   line-height: 3.2rem;

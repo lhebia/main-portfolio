@@ -1,10 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { css } from '@emotion/core';
 
 import Layout from '../components/Layout';
-import { PageSection, Wrapper } from '../styles/globalStyles';
+import { BlogPageSection, Wrapper } from '../styles/globalStyles';
 import Head from '../components/Head';
 
 export const query = graphql`
@@ -34,16 +33,14 @@ export default function blogTemplate(props) {
     <Layout>
       <Head title={props.data.contentfulBlogPost.title} />
       <Wrapper>
-        <PageSection css={css`
-          min-height: 80vh;
-        `}>
+        <BlogPageSection>
           <h1>{props.data.contentfulBlogPost.title}</h1>
           <p>{props.data.contentfulBlogPost.publishedDate}</p>
           {documentToReactComponents(
             props.data.contentfulBlogPost.body.json,
             options
           )}
-        </PageSection>
+        </BlogPageSection>
       </Wrapper>
     </Layout>
   )
