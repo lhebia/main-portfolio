@@ -10,7 +10,9 @@ export const siteVars = {
   mainText: "#100b00",
   mainHighlight: "#145c9e",
   offWhite: "#fafafa",
-  lightGrey: "#dbd9d9",
+  // lightGrey: "#dbd9d9",
+  lightGrey: "#fafafa",
+  boxShadow: "0px 10px 20px 0px rgba(0,0,0,0.05)"
 };
 
 export const PageSection = styled.section`

@@ -12,6 +12,7 @@ const FlexedHeader = styled.header`
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: ${siteVars.offWhite};
     transition: .2s ease;
     border-bottom: 1px solid ${siteVars.lightGrey};
     // -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
@@ -71,13 +72,13 @@ const FlexedUl = styled.ul`
 
 const Header = () => {
 
-  const [colour, setColour] = useState(`${siteVars.lightGrey}`)
+  const [shadow, setShadow] = useState(`${siteVars.boxShadow}`)
 
   const listenScrollEvent = e => {
     if (window.scrollY > 0) {
-      setColour(`${siteVars.offWhite}`)
+      setShadow(`${siteVars.boxShadow}`)
     } else {
-      setColour(`${siteVars.lightGrey}`)
+      setShadow(`none`)
     }
   }
 
@@ -97,7 +98,7 @@ const Header = () => {
 
     return (
         <FlexedHeader css={css`
-          background-color: ${colour};
+          box-shadow: ${shadow};
         `}>
             <Global
                 styles={setup}
