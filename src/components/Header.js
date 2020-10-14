@@ -72,7 +72,7 @@ const FlexedUl = styled.ul`
 
 const Header = () => {
 
-  const [shadow, setShadow] = useState(`${siteVars.boxShadow}`)
+  const [shadow, setShadow] = useState(`none`)
 
   const listenScrollEvent = e => {
     if (window.scrollY > 0) {
@@ -84,7 +84,7 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent)
-  })
+  },[])
 
     const data = useStaticQuery(graphql`
       query {
