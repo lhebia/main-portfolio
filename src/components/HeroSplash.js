@@ -19,12 +19,13 @@ const SplashSection = styled.section`
 const SplashTitle = styled.p`
   font-size: 7rem;
   color: white;
+  text-align: center;
   @media (max-width: 768px) {
     font-size: 5rem;
   }
   @media (max-width: 450px) {
     font-size: 3rem;
-    text-align: center;
+    // text-align: center;
   }
 `
 

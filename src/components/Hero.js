@@ -16,7 +16,7 @@ const HeroContainer = styled.section`
     padding: 6rem 0;
     @media (max-width: 500px) {
       width: 100%;
-      padding: 1rem;
+      padding: 4rem 1rem;
     }
     // @media (max-width: 420px) {
     //   padding: 1rem;

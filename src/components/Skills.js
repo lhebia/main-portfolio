@@ -12,6 +12,9 @@ const SkillsUl = styled.ul`
     li {
         text-align: center;
     }
+    @media (max-width: 375px) {
+        gap: 1rem;
+    }
 `;
 
 export default function Skills() {
