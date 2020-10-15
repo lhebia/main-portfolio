@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
@@ -47,9 +47,6 @@ const ContactForm = () => {
               background-color: ${siteVars.mainHighlight};
               color: ${siteVars.offWhite};
               border: 1px solid ${siteVars.mainHighlight};
-              // background-color: ${siteVars.offWhite};
-              // border: 1px solid ${siteVars.mainHighlight};
-              // color: ${siteVars.mainHighlight};
               opacity: 0.86;
               transition: all 0.2s;
               &:hover,
@@ -57,9 +54,6 @@ const ContactForm = () => {
                 background-color: ${siteVars.offWhite};
                 border: 1px solid ${siteVars.mainHighlight};
                 color: ${siteVars.mainHighlight};
-                // background-color: ${siteVars.mainHighlight};
-                // color: ${siteVars.offWhite};
-                // border: 1px solid ${siteVars.mainHighlight};
               }
             `}
             />
