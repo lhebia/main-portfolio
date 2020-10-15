@@ -19,6 +19,22 @@ const PortfolioForm = styled.form`
 `
 
 const ContactForm = () => {
+
+  const [loginInput, setLoginInput] = useReducer(
+    (state, newState) => ({ ...state, ...newState }),
+    {
+      name: "Name *",
+      email: "Email *",
+      message: "Message *",
+    }
+  )
+
+  const handleLoginInput = event => {
+    const name = event.target.name
+    const value = event.target.value
+    setLoginInput({ [name]: value })
+  }
+
     return (
       <Wrapper>
         <PageSection
@@ -31,31 +47,49 @@ const ContactForm = () => {
           `}
         >
           <SectionHeader>Contact Me</SectionHeader>
-          <PortfolioForm>
-            <input type="text" name="name" id="name" value="Your name *" />
-            <input type="text" name="email" id="email" value="Your email *" />
-            <textarea id="message" name="message" rows="5" cols="33">
-              Your message *
+          <PortfolioForm action="https://formspree.io/f/xwkrrapw" method="POST">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              onChange={handleLoginInput}
+              value={loginInput.name}
+            />
+            <input
+              type="text"
+              name="email"
+              id="email"
+              onChange={handleLoginInput}
+              value={loginInput.email}
+            />
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              cols="33"
+              onChange={handleLoginInput}
+            >
+              {loginInput.message}
             </textarea>
             <input
               type="submit"
               value="Submit"
               css={css`
-              padding: 1rem 1.2rem;
-              margin-top: 1rem;
-              border-radius: 5px;
-              background-color: ${siteVars.mainHighlight};
-              color: ${siteVars.offWhite};
-              border: 1px solid ${siteVars.mainHighlight};
-              opacity: 0.86;
-              transition: all 0.2s;
-              &:hover,
-              &:focus {
-                background-color: ${siteVars.offWhite};
+                padding: 1rem 1.2rem;
+                margin-top: 1rem;
+                border-radius: 5px;
+                background-color: ${siteVars.mainHighlight};
+                color: ${siteVars.offWhite};
                 border: 1px solid ${siteVars.mainHighlight};
-                color: ${siteVars.mainHighlight};
-              }
-            `}
+                opacity: 0.86;
+                transition: all 0.2s;
+                &:hover,
+                &:focus {
+                  background-color: ${siteVars.offWhite};
+                  border: 1px solid ${siteVars.mainHighlight};
+                  color: ${siteVars.mainHighlight};
+                }
+              `}
             />
           </PortfolioForm>
         </PageSection>
