@@ -16,6 +16,9 @@ const PortfolioForm = styled.form`
     border: 1px solid ${siteVars.mainText};
     font-family: -apple-system, "Roboto", sans-serif;
   }
+  @media (max-width:768px) {
+    width: 100%;
+  }
 `
 
 const ContactForm = () => {
@@ -54,6 +57,7 @@ const ContactForm = () => {
               id="name"
               onChange={handleLoginInput}
               value={loginInput.name}
+              // onFocus={console.log('** Focused **')}
             />
             <input
               type="text"

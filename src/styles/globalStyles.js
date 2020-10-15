@@ -47,6 +47,7 @@ export const BlogPageSection = styled.section`
     font-size: 1.20112rem;
     line-height: 1.75rem;
     color: hsla(0,0%,0%,0.59);
+    padding: 0 0.5rem;
     font-style: italic;
     border-left: 0.32813rem solid hsla(0,0%,0%,0.9);
   }
