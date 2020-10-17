@@ -41,6 +41,7 @@ const ContactForm = () => {
     return (
       <Wrapper>
         <PageSection
+          id="Contact"
           css={css`
             display: flex;
             justify-content: center;

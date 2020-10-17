@@ -5,7 +5,7 @@ import { Global, css } from '@emotion/core';
 
 import dp36 from '../assets/dp36.png';
 import setup from '../styles/setup';
-import { Wrapper, siteVars } from '../styles/globalStyles';
+import { Wrapper, siteVars, LinkLikeButton } from '../styles/globalStyles';
 
 const FlexedHeader = styled.header`
     padding: 1.2rem 0;
@@ -52,22 +52,26 @@ const FlexedUl = styled.ul`
     padding: 0 0.5rem;
     position: relative;
   }
-  a::after {
-    content: "";
-    position: absolute;
-    top: 2rem;
-    left: 0px;
-    width: 10%;
-    z-index: -1;
-    height: 0.2rem;
-    background-color: ${siteVars.mainHighlight};
-    opacity: 0;
-    transition: .2s ease;
-  }
-  a:hover::after {
-    opacity: 1;
-    width: 100%;
-  }
+  // a::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 2rem;
+  //   left: 0px;
+  //   width: 10%;
+  //   z-index: -1;
+  //   height: 0.2rem;
+  //   background-color: ${siteVars.mainHighlight};
+  //   opacity: 0;
+  //   transition: 0.2s ease;
+  // }
+  // a:hover::after {
+  //   opacity: 1;
+  //   width: 100%;
+  // }
+  // a:nth-of-type(3)::after {
+  //   content: "";
+  //   opacity: 0;
+  // }
 `
 
 const Header = () => {
@@ -97,37 +101,52 @@ const Header = () => {
     `)
 
     return (
-        <FlexedHeader css={css`
+      <FlexedHeader
+        css={css`
           box-shadow: ${shadow};
-        `}>
-            <Global
-                styles={setup}
-            />
-            <Wrapper css={css`
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            `}>
-                <FlexedDiv>
-                    <Link to="/">
-                        <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
-                    </Link>
-                    <Link to="/">
-                        <HeaderH1>{data.site.siteMetadata.title}</HeaderH1>
-                    </Link>
-                </FlexedDiv>
-                <nav>
-                    <FlexedUl>
-                        <li>
-                            <Link to="/">Portfolio</Link>
-                        </li>
-                        <li>
-                            <Link to="/blog">Blog</Link>
-                        </li>
-                    </FlexedUl>
-                </nav>
-            </Wrapper>
-        </FlexedHeader>
+        `}
+      >
+        <Global styles={setup} />
+        <Wrapper
+          css={css`
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          `}
+        >
+          <FlexedDiv>
+            <Link to="/">
+              <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
+            </Link>
+            <Link to="/">
+              <HeaderH1>{data.site.siteMetadata.title}</HeaderH1>
+            </Link>
+          </FlexedDiv>
+          <nav>
+            <FlexedUl>
+              <li>
+                <Link to="/">Portfolio</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <LinkLikeButton
+                  css={css`
+                    &::after {
+                      opacity: 0;
+                      width: 0;
+                    }
+                  `}
+                  href="#Contact"
+                >
+                  Contact
+                </LinkLikeButton>
+              </li>
+            </FlexedUl>
+          </nav>
+        </Wrapper>
+      </FlexedHeader>
     )
 }
 

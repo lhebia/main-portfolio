@@ -82,3 +82,29 @@ export const ButtonStyle = styled.button`
     // border: 1px solid ${siteVars.mainHighlight};
   }
 `;
+
+export const LinkLikeButton = styled.a`
+  padding: 0.5rem 0.7rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  background-color: ${siteVars.mainHighlight};
+  color: ${siteVars.offWhite};
+  border: 1px solid ${siteVars.mainHighlight};
+  // background-color: ${siteVars.offWhite};
+  // border: 1px solid ${siteVars.mainHighlight};
+  // color: ${siteVars.mainHighlight};
+  opacity: 0.86;
+  transition: all 0.2s;
+  &:hover::after {
+    opacity: 0;
+  }
+  &:hover,
+  &:focus {
+    background-color: ${siteVars.offWhite};
+    border: 1px solid ${siteVars.mainHighlight};
+    color: ${siteVars.mainHighlight};
+    // background-color: ${siteVars.mainHighlight};
+    // color: ${siteVars.offWhite};
+    // border: 1px solid ${siteVars.mainHighlight};
+  }
+`

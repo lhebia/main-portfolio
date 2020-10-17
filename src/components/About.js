@@ -1,9 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import { siteVars, ButtonStyle } from '../styles/globalStyles';
+import {css} from '@emotion/core';
+import { siteVars, LinkLikeButton } from '../styles/globalStyles';
 
-const HeroContainer = styled.section`
+const AboutContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,11 +39,12 @@ const HeroContainer = styled.section`
     p {
       font-size: 1.2rem;
       line-height: 1.8rem;
+      padding: 0.2rem;
     }
   }
 `
 
-export default function Hero() {
+export default function About() {
 
     const data = useStaticQuery(graphql`
       query {
@@ -59,13 +61,17 @@ export default function Hero() {
     `)
 
     return (
-      <HeroContainer>
+      <AboutContainer>
         <div>
           <h2>{data.site.siteMetadata.hero.title}</h2>
           <h3>{data.site.siteMetadata.hero.subTitle}</h3>
           <p>{data.site.siteMetadata.hero.desc}</p>
-          <ButtonStyle>Contact Me</ButtonStyle>
+          <LinkLikeButton css={css`
+            display: block;
+            width: 8rem;
+            margin: 1rem auto;
+          `}href="#Contact">Contact Me</LinkLikeButton>
         </div>
-      </HeroContainer>
+      </AboutContainer>
     )
 }
