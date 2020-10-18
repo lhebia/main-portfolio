@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { Wrapper, PageSection, SectionHeader, siteVars } from '../styles/globalStyles';
+import { Wrapper, PageSection, SectionHeader, siteVars, SectionSubHeader } from '../styles/globalStyles';
 
 const ProjectUl = styled.ul`
   display: grid;
@@ -81,6 +81,7 @@ const Projects = () => {
         <Wrapper>
             <PageSection>
                 <SectionHeader>Projects</SectionHeader>
+                <SectionSubHeader>A few of the things I've been working on.</SectionSubHeader>
                 <ProjectUl>
                     {
                         projectList.map((project) => {

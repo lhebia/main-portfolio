@@ -56,9 +56,16 @@ export const BlogPageSection = styled.section`
 export const SectionHeader = styled.h4`
   font-size: 2.6rem;
   line-height: 3.2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
   text-align: center;
 `;
+
+export const SectionSubHeader = styled.p`
+  font-size: 1rem;
+  line-height: 1.2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+`
 
 export const ButtonStyle = styled.button`
   padding: 1rem 1.2rem;

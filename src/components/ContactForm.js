@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import { Wrapper, SectionHeader, PageSection, siteVars } from '../styles/globalStyles';
+import { Wrapper, SectionHeader, PageSection, siteVars, SectionSubHeader } from '../styles/globalStyles';
 
 const PortfolioForm = styled.form`
   display: flex;
@@ -51,6 +51,7 @@ const ContactForm = () => {
           `}
         >
           <SectionHeader>Contact Me</SectionHeader>
+          <SectionSubHeader>Let's chat, feel free to drop a line to discuss a project or even to have a coffee.</SectionSubHeader>
           <PortfolioForm action="https://formspree.io/f/xwkrrapw" method="POST">
             <input
               type="text"

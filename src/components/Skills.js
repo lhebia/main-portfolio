@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
+import { Wrapper, PageSection, SectionHeader, SectionSubHeader } from '../styles/globalStyles';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const SkillsUl = styled.ul`
@@ -38,6 +38,7 @@ export default function Skills() {
         <Wrapper>
             <PageSection>
                 <SectionHeader>Skills</SectionHeader>
+                <SectionSubHeader>The skills I have - and continue - to work on.</SectionSubHeader>
                 <SkillsUl>
                     {
                         skills.map((skill) => {
