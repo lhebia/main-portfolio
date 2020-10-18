@@ -21,8 +21,12 @@ const BlogLi = styled.li`
 
 const BlogTitle = styled.p`
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.8rem;
     font-weight: bold;
+`;
+
+const TitleDate = styled.p`
+    font-size: 0.8rem;
 `;
 
 const Blog = () => {
@@ -33,6 +37,7 @@ const Blog = () => {
           edges {
             node {
               title
+              description
               slug
               publishedDate(formatString: "MMMM Do, YYYY")
             }
@@ -54,12 +59,16 @@ const Blog = () => {
                         {
                             posts.map(post => {
                                 return (
-                                    <BlogLi>
-                                        <Link to={`/blog/${post.node.slug}`} key={post.node.slug}>
-                                            <BlogTitle>{post.node.title}</BlogTitle>
-                                            <p>{post.node.publishedDate}</p>
-                                        </Link>
-                                    </BlogLi>
+                                  <BlogLi>
+                                    <Link
+                                      to={`/blog/${post.node.slug}`}
+                                      key={post.node.slug}
+                                    >
+                                      <BlogTitle>{post.node.title}</BlogTitle>
+                                      <TitleDate>{post.node.publishedDate}</TitleDate>
+                                      <p>{post.node.description}</p>
+                                    </Link>
+                                  </BlogLi>
                                 )
                             })
                         }
