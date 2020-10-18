@@ -52,26 +52,31 @@ const FlexedUl = styled.ul`
     padding: 0 0.5rem;
     position: relative;
   }
-  // a::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 2rem;
-  //   left: 0px;
-  //   width: 10%;
-  //   z-index: -1;
-  //   height: 0.2rem;
-  //   background-color: ${siteVars.mainHighlight};
-  //   opacity: 0;
-  //   transition: 0.2s ease;
-  // }
-  // a:hover::after {
-  //   opacity: 1;
-  //   width: 100%;
-  // }
-  // a:nth-of-type(3)::after {
-  //   content: "";
-  //   opacity: 0;
-  // }
+  a::after {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    width: 10%;
+    z-index: -1;
+    height: 0.2rem;
+    background-color: ${siteVars.mainHighlight};
+    opacity: 0;
+    transition: 0.2s ease;
+  }
+  a:hover::after {
+    left: 10%;
+    opacity: 1;
+    width: 80%;
+  }
+  a:nth-of-type(3):hover::after {
+    opacity: 0;
+  }
+  @media (max-width: 450px) {
+    a {
+      font-size: 0.9rem;
+    }
+  }
 `
 
 const Header = () => {
@@ -132,12 +137,6 @@ const Header = () => {
               </li>
               <li>
                 <LinkLikeButton
-                  css={css`
-                    &::after {
-                      opacity: 0;
-                      width: 0;
-                    }
-                  `}
                   href="#Contact"
                 >
                   Contact

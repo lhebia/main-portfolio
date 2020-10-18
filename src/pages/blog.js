@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import { Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
 import Head from '../components/Head';
 import HeroSplash from '../components/HeroSplash';
+import ContactForm from '../components/ContactForm';
 
 const BlogUl = styled.ul`
     text-align: center;
@@ -64,6 +65,7 @@ const Blog = () => {
                         }
                     </BlogUl>
                 </PageSection>
+                <ContactForm />
             </Wrapper>
         </Layout>
     )
