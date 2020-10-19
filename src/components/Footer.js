@@ -69,7 +69,7 @@ const Footer = () => {
               </a>
             </li>
           </FooterUl>
-          <FooterP>Handcrafted by me with and Gatsby in twenty-twenty.</FooterP>
+          <FooterP>Handcrafted by yours truly with Gatsby in twenty-twenty.</FooterP>
         </Wrapper>
       </footer>
     )

@@ -1,9 +1,10 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+import { css } from '@emotion/core';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import Layout from '../components/Layout';
-import { BlogPageSection, Wrapper } from '../styles/globalStyles';
+import { siteVars, BlogPageSection, Wrapper } from '../styles/globalStyles';
 import Head from '../components/Head';
 
 export const query = graphql`
@@ -41,6 +42,28 @@ export default function blogTemplate(props) {
             props.data.contentfulBlogPost.body.json,
             options
           )}
+          <hr css={css`margin: 2rem 0;`}class="solid"></hr>
+          <Link
+            css={css`
+              padding: 0.5rem 0.7rem;
+              margin-top: 1rem;
+              border-radius: 5px;
+              background-color: ${siteVars.mainHighlight};
+              color: ${siteVars.offWhite};
+              border: 1px solid ${siteVars.mainHighlight};
+              opacity: 0.86;
+              transition: all 0.2s;
+              &:hover,
+              &:focus {
+                background-color: ${siteVars.offWhite};
+                border: 1px solid ${siteVars.mainHighlight};
+                color: ${siteVars.mainHighlight};
+              }
+            `}
+            to="/blog"
+          >
+            Back
+          </Link>
         </BlogPageSection>
       </Wrapper>
     </Layout>
