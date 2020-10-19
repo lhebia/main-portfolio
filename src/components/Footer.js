@@ -61,7 +61,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://aedin.com/in/lhebia"
+                href="https://linkedin.com/in/lhebia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -69,7 +69,7 @@ const Footer = () => {
               </a>
             </li>
           </FooterUl>
-          <FooterP>Handcrafted with <span role="img" aria-label="Coffee">☕️</span> and Gatsby in twenty-twenty.</FooterP>
+          <FooterP>Handcrafted by me with and Gatsby in twenty-twenty.</FooterP>
         </Wrapper>
       </footer>
     )
