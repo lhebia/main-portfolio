@@ -40,11 +40,15 @@ export const BlogPageSection = styled.section`
     padding: 0.5rem 0;
   }
   img {
-    padding: 1rem 0;
+    padding-top: 1rem;
   }
   p {
     line-height: 1.5rem;
     padding: 1rem 0;
+    i {
+      font-style: italic;
+      font-size: 0.9rem;
+    }
   }
   blockquote {
     font-size: 1.20112rem;
