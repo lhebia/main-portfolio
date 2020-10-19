@@ -5,7 +5,7 @@ import { Global, css } from '@emotion/core';
 
 import dp36 from '../assets/dp36.png';
 import setup from '../styles/setup';
-import { Wrapper, siteVars, LinkLikeButton } from '../styles/globalStyles';
+import { Wrapper, siteVars } from '../styles/globalStyles';
 
 const FlexedHeader = styled.header`
     padding: 1.2rem 0;
@@ -15,9 +15,6 @@ const FlexedHeader = styled.header`
     background-color: ${siteVars.offWhite};
     transition: .2s ease;
     border-bottom: 1px solid ${siteVars.lightGrey};
-    // -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
-    // -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
-    // box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);
 `;
 
 const HeaderH1 = styled.h1`
@@ -29,7 +26,6 @@ const HeaderH1 = styled.h1`
 `;
 
 const HeaderImg = styled.img`
-//   width: 3rem;
   padding-right: 1rem;
   padding-bottom: 0.2rem;
   transition: all .2s;
@@ -136,11 +132,27 @@ const Header = () => {
                 <Link to="/blog">Blog</Link>
               </li>
               <li>
-                <LinkLikeButton
-                  href="#Contact"
+                <Link
+                  css={css`
+                    padding: 0.5rem 0.7rem;
+                    margin-top: 1rem;
+                    border-radius: 5px;
+                    background-color: ${siteVars.mainHighlight};
+                    color: ${siteVars.offWhite};
+                    border: 1px solid ${siteVars.mainHighlight};
+                    opacity: 0.86;
+                    transition: all 0.2s;
+                    &:hover,
+                    &:focus {
+                      background-color: ${siteVars.offWhite};
+                      border: 1px solid ${siteVars.mainHighlight};
+                      color: ${siteVars.mainHighlight};
+                    }
+                  `}
+                  to="/#Contact"
                 >
                   Contact
-                </LinkLikeButton>
+                </Link>
               </li>
             </FlexedUl>
           </nav>

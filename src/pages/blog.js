@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import { Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
 import Head from '../components/Head';
 import HeroSplash from '../components/HeroSplash';
-import ContactForm from '../components/ContactForm';
 
 const BlogUl = styled.ul`
     text-align: center;
@@ -20,6 +19,7 @@ const BlogLi = styled.li`
 `;
 
 const BlogTitle = styled.p`
+    display: inline;
     font-size: 1.5rem;
     line-height: 1.8rem;
     font-weight: bold;
@@ -65,16 +65,17 @@ const Blog = () => {
                                       key={post.node.slug}
                                     >
                                       <BlogTitle>{post.node.title}</BlogTitle>
-                                      <TitleDate>{post.node.publishedDate}</TitleDate>
-                                      <p>{post.node.description}</p>
                                     </Link>
+                                    <TitleDate>
+                                      {post.node.publishedDate}
+                                    </TitleDate>
+                                    <p>{post.node.description}</p>
                                   </BlogLi>
                                 )
                             })
                         }
                     </BlogUl>
                 </PageSection>
-                <ContactForm />
             </Wrapper>
         </Layout>
     )

@@ -12,7 +12,8 @@ export const siteVars = {
   offWhite: "#fafafa",
   // lightGrey: "#dbd9d9",
   lightGrey: "#fafafa",
-  boxShadow: "0px 10px 20px 0px rgba(0,0,0,0.05)"
+  boxShadow: "0px 10px 20px 0px rgba(0,0,0,0.05)",
+  borderRadius: "5px",
 };
 
 export const PageSection = styled.section`
@@ -21,6 +22,8 @@ export const PageSection = styled.section`
 
 export const BlogPageSection = styled.section`
   padding: 2rem 0;
+  width: 80%;
+  margin: 0 auto;
   h1 {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -97,21 +100,12 @@ export const LinkLikeButton = styled.a`
   background-color: ${siteVars.mainHighlight};
   color: ${siteVars.offWhite};
   border: 1px solid ${siteVars.mainHighlight};
-  // background-color: ${siteVars.offWhite};
-  // border: 1px solid ${siteVars.mainHighlight};
-  // color: ${siteVars.mainHighlight};
   opacity: 0.86;
   transition: all 0.2s;
-  &:hover::after {
-    opacity: 0;
-  }
   &:hover,
   &:focus {
     background-color: ${siteVars.offWhite};
     border: 1px solid ${siteVars.mainHighlight};
     color: ${siteVars.mainHighlight};
-    // background-color: ${siteVars.mainHighlight};
-    // color: ${siteVars.offWhite};
-    // border: 1px solid ${siteVars.mainHighlight};
   }
 `
