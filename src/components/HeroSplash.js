@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { siteVars } from '../styles/globalStyles';
-import labeach from '../assets/labeach.jpg';
+import labeachsmall from '../assets/labeachsmall.jpg';
+import bloghandsmallA from '../assets/bloghandsmallA.jpg';
 
 const SplashSection = styled.section`
     min-height: 85vh;
@@ -30,8 +31,18 @@ const SplashTitle = styled.p`
   }
 `
 
-const HeroSplash = () => {
+const HeroSplash = ({ pageType }) => {
 
+    const [background, setBackground] = useState('');
+
+    useEffect(() => {
+        if (pageType === 'blog') {
+            setBackground(bloghandsmallA);
+        } else {
+            setBackground(labeachsmall);
+        }
+    },[pageType])
+    
     const data = useStaticQuery(graphql`
     query {
         site {
@@ -44,7 +55,7 @@ const HeroSplash = () => {
 
     return (
         <SplashSection css={css`
-            background-image: url(${labeach});        
+            background-image: url(${background});        
         `}>
             <SplashTitle>{data.site.siteMetadata.headTitle}</SplashTitle>
         </SplashSection>

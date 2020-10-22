@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <Layout headerPosition="fixed" colorA="#ffffff" colorB="#000000" >
       <Head title="Portfolio" />
-      <HeroSplash />
+      <HeroSplash pageType="main" />
       <About />
       <Projects />
       <Skills />

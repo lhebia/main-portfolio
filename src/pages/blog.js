@@ -51,7 +51,7 @@ const Blog = () => {
     return (
         <Layout headerPosition="fixed" colorA="#ffffff" colorB="#000000">
             <Head title="Blog" />
-            <HeroSplash />
+            <HeroSplash pageType="blog" />
             <Wrapper>
                 <PageSection>
                     <SectionHeader>Blog</SectionHeader>
