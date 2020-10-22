@@ -70,7 +70,7 @@ const FlexedUl = styled.ul`
   }
   @media (max-width: 450px) {
     a {
-      font-size: 0.9rem;
+      font-size: 1.2rem;
     }
   }
 `

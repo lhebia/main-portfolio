@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import Layout from '../components/Layout';
 import { Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
@@ -54,7 +55,14 @@ const Blog = () => {
             <HeroSplash pageType="blog" />
             <Wrapper>
                 <PageSection>
-                    <SectionHeader>Blog</SectionHeader>
+                    <SectionHeader css={css`
+                      font-size: 4rem;
+                      line-height: 4.6rem;
+                    `}>Blog</SectionHeader>
+                    <p css={css`
+                      text-align: center;
+                      margin-bottom: 4rem;
+                    `}>A few stories, mostly about web development, parenting and sometimes burgers <span role="img" aria-label="Burger">🍔</span>.</p>
                     <BlogUl>
                         {
                             posts.map(post => {

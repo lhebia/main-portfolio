@@ -6,7 +6,7 @@ module.exports = {
     desc: "Lawrence Web Developer",
     hero: {
       title: "Hi 👋, I'm Lawrence",
-      subTitle: "< Front-End Web Developer />",
+      subTitle: "Front-End Web Developer",
       desc:
         "I am a passionate and dedicated Front-End Web Developer who loves to build things that help to make the world a better place. I believe in code that humans can easily read and interfaces we can easily interpret. I love working with people and I believe in doing great work by doing what you love.",
     },

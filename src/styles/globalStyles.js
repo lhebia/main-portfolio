@@ -58,6 +58,9 @@ export const BlogPageSection = styled.section`
     font-style: italic;
     border-left: 0.32813rem solid hsla(0,0%,0%,0.9);
   }
+  @media (max-width: 550px) {
+    width: 100%;
+  }
 `;
 
 export const SectionHeader = styled.h4`
