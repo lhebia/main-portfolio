@@ -10,7 +10,7 @@ import HeroSplash from '../components/HeroSplash';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout headerPosition="fixed" >
       <Head title="Portfolio" />
       <HeroSplash />
       <About />

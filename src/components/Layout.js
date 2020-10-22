@@ -3,10 +3,10 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, headerPosition }) => {
     return (
         <React.Fragment>
-            <Header />
+            <Header headerPosition={headerPosition} />
             <div>
                 {children}
             </div>

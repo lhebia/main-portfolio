@@ -9,12 +9,12 @@ import { Wrapper, siteVars } from '../styles/globalStyles';
 
 const FlexedHeader = styled.header`
     padding: 1.2rem 0;
-    position: sticky;
+    width: 100%;
     top: 0;
     z-index: 1000;
     background-color: ${siteVars.offWhite};
     transition: .2s ease;
-    border-bottom: 1px solid ${siteVars.lightGrey};
+    // border-bottom: 1px solid ${siteVars.lightGrey};
 `;
 
 const HeaderH1 = styled.h1`
@@ -75,15 +75,21 @@ const FlexedUl = styled.ul`
   }
 `
 
-const Header = () => {
+const Header = ({ headerPosition }) => {
 
-  const [shadow, setShadow] = useState(`none`)
+  const [shadow, setShadow] = useState(`none`);
+  const [opacity, setOpacity] = useState(0);
+  const [color, setColor] = useState('#ffffff');
 
   const listenScrollEvent = e => {
     if (window.scrollY > 0) {
-      setShadow(`${siteVars.boxShadow}`)
+      setShadow(`${siteVars.boxShadow}`);
+      setOpacity(1);
+      setColor('#000000');
     } else {
-      setShadow(`none`)
+      setShadow(`none`);
+      setOpacity(0);
+      setColor('#ffffff');
     }
   }
 
@@ -104,7 +110,15 @@ const Header = () => {
     return (
       <FlexedHeader
         css={css`
+          position: ${headerPosition};
           box-shadow: ${shadow};
+          background-color: rgba(250, 250, 250, ${opacity});
+          a {
+            color: ${color};
+          }
+          a:hover {
+            color: ${siteVars.mainHighlight};
+          }
         `}
       >
         <Global styles={setup} />
@@ -138,7 +152,7 @@ const Header = () => {
                     margin-top: 1rem;
                     border-radius: 5px;
                     background-color: ${siteVars.mainHighlight};
-                    color: ${siteVars.offWhite};
+                    color: ${siteVars.offWhite} !important;
                     border: 1px solid ${siteVars.mainHighlight};
                     opacity: 0.86;
                     transition: all 0.2s;
@@ -146,7 +160,7 @@ const Header = () => {
                     &:focus {
                       background-color: ${siteVars.offWhite};
                       border: 1px solid ${siteVars.mainHighlight};
-                      color: ${siteVars.mainHighlight};
+                      color: ${siteVars.mainHighlight} !important;
                     }
                   `}
                   to="/#Contact"

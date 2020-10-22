@@ -32,7 +32,7 @@ export default function blogTemplate(props) {
   }
 
   return (
-    <Layout>
+    <Layout headerPosition="sticky">
       <Head title={props.data.contentfulBlogPost.title} />
       <Wrapper>
         <BlogPageSection>

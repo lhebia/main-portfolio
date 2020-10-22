@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { siteVars } from '../styles/globalStyles';
-// import elnido from '../assets/elnido.jpg';
+import labeach from '../assets/labeach.jpg';
 
 const SplashSection = styled.section`
-    min-height: 75vh;
+    min-height: 85vh;
     background-color: ${siteVars.lightGrey};
     background-position: center;
     background-size: cover;
@@ -42,7 +43,9 @@ const HeroSplash = () => {
     `)
 
     return (
-        <SplashSection>
+        <SplashSection css={css`
+            background-image: url(${labeach});        
+        `}>
             <SplashTitle>{data.site.siteMetadata.headTitle}</SplashTitle>
         </SplashSection>
     )
