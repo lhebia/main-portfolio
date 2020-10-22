@@ -146,7 +146,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
                 <Link to="/blog">Blog</Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   css={css`
                     padding: 0.5rem 0.7rem;
                     margin-top: 1rem;
@@ -166,7 +166,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
                   to="/#Contact"
                 >
                   Contact
-                </Link>
+                </Link> */}
               </li>
             </FlexedUl>
           </nav>
