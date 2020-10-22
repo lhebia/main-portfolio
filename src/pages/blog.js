@@ -49,7 +49,7 @@ const Blog = () => {
     const posts = data.allContentfulBlogPost.edges;
 
     return (
-        <Layout headerPosition="fixed">
+        <Layout headerPosition="fixed" colorA="#ffffff" colorB="#000000">
             <Head title="Blog" />
             <HeroSplash />
             <Wrapper>

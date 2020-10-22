@@ -75,27 +75,27 @@ const FlexedUl = styled.ul`
   }
 `
 
-const Header = ({ headerPosition }) => {
+const Header = ({ headerPosition, colorA, colorB }) => {
 
   const [shadow, setShadow] = useState(`none`);
   const [opacity, setOpacity] = useState(0);
-  const [color, setColor] = useState('#ffffff');
+  const [color, setColor] = useState(colorA);
 
   const listenScrollEvent = e => {
     if (window.scrollY > 0) {
       setShadow(`${siteVars.boxShadow}`);
       setOpacity(1);
-      setColor('#000000');
+      setColor(colorB);
     } else {
       setShadow(`none`);
       setOpacity(0);
-      setColor('#ffffff');
+      setColor(colorA);
     }
   }
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent)
-  },[])
+  },)
 
     const data = useStaticQuery(graphql`
       query {

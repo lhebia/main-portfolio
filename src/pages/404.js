@@ -8,7 +8,7 @@ import Head from '../components/Head';
 
 const NotFound = () => {
     return (
-      <Layout>
+      <Layout headerPosition="fixed" colorA="#000000" colorB="#000000">
         <Head title="Not Found" />
         <PageSection
           css={css`
