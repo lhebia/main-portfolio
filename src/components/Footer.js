@@ -69,7 +69,8 @@ const Footer = () => {
               </a>
             </li>
           </FooterUl>
-          <FooterP>Handcrafted by yours truly with Gatsby in twenty-twenty.</FooterP>
+          <FooterP>Handcrafted with <a href="https://gatsbyjs.com" target="_blank"
+                rel="noopener noreferrer">Gatsby</a> in twenty-twenty.</FooterP>
         </Wrapper>
       </footer>
     )
