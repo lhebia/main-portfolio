@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { Wrapper, PageSection, SectionHeader, siteVars, SectionSubHeader } from '../styles/globalStyles';
+import { Wrapper, PageSection, SectionHeader, siteVars, SectionSubHeader, TechStack } from '../styles/globalStyles';
 
 const ProjectUl = styled.ul`
   display: grid;
@@ -48,12 +48,6 @@ const ProjectTitle = styled.p`
     font-size: 1.6rem;
     line-height: 2.2rem;
     padding: 1rem 0;
-`;
-
-const TechStack = styled.p`
-    font-family: 'Ubuntu', sans-serif;
-    line-height: 1.6rem;
-    letter-spacing: 0.09rem;
 `;
 
 const Projects = () => {

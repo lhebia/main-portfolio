@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { Wrapper, PageSection, SectionHeader, SectionSubHeader } from '../styles/globalStyles';
+import { Wrapper, PageSection, SectionHeader, SectionSubHeader, TechStack } from '../styles/globalStyles';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const SkillsUl = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     padding: 1rem;
     li {
         text-align: center;
@@ -38,13 +38,13 @@ export default function Skills() {
         <Wrapper>
             <PageSection>
                 <SectionHeader>Skills</SectionHeader>
-                <SectionSubHeader>The skills I have - and continue - to work on.</SectionSubHeader>
+                <SectionSubHeader>The things I love to learn about and work on everyday.</SectionSubHeader>
                 <SkillsUl>
                     {
                         skills.map((skill) => {
                             return (
                               <li>
-                                <p>{skill.skillName}</p>
+                                <TechStack>{skill.skillName}</TechStack>
                               </li>
                               // <li>
                               //     <p>{skill.skillName}</p>

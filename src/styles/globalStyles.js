@@ -115,4 +115,10 @@ export const LinkLikeButton = styled.a`
     border: 1px solid ${siteVars.mainHighlight};
     color: ${siteVars.mainHighlight};
   }
-`
+`;
+
+export const TechStack = styled.p`
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6rem;
+    letter-spacing: 0.09rem;
+`;
