@@ -17,7 +17,7 @@ export const siteVars = {
 };
 
 export const PageSection = styled.section`
-  padding: 6rem 0;
+  padding: 3rem 0;
 `;
 
 export const BlogPageSection = styled.section`

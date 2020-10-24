@@ -9,12 +9,11 @@ const AboutContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-color: ${siteVars.offWhite};
   div {
     text-align: center;
     width: 75%;
     max-width: 1200px;
-    padding: 6rem 0;
+    padding: 6rem 0 3rem;
     @media (max-width: 500px) {
       width: 100%;
       padding: 4rem 1rem;

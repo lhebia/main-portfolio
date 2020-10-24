@@ -16,11 +16,13 @@ const ProjectUl = styled.ul`
     grid-template-columns: 1fr;
   }
   li {
-    padding: 1rem 0;
-    text-align: center;
+    padding: 0 0 1rem 0;
+    text-align: left;
+    box-shadow: ${siteVars.boxShadow};
+    border-radius: 5px 5px 5px 5px;
   }
   img {
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 0px 0px;
     transition: all 0.6s;
     opacity: 0.46;
     &:hover,
@@ -48,6 +50,10 @@ const ProjectTitle = styled.p`
     font-size: 1.6rem;
     line-height: 2.2rem;
     padding: 1rem 0;
+`;
+
+const TextCard = styled.div`
+  padding: 1rem;
 `;
 
 const Projects = () => {
@@ -85,16 +91,18 @@ const Projects = () => {
                                 <li key={project.title}>
                                     <div css={css`
                                         overflow: hidden;
-                                        border-radius: 5px 5px 5px 5px;
+                                        border-radius: 5px 5px 0px 0px;
                                     `}>
                                         <Link to={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                             <img src={project.imgName} alt={project.desc} />
                                         </Link>
                                     </div>
-                                    <ProjectTitle>{project.title}</ProjectTitle>
-                                    <TechStack>{ stack }</TechStack>
-                                    <p>{project.desc}</p>
-                                    <p><Link to={project.liveUrl} target="_blank" rel="noopener noreferrer">Live</Link> | <Link to={project.githubUrl} target="_blank" rel="noopener noreferrer">Github</Link></p>
+                                    <TextCard>
+                                      <ProjectTitle>{project.title}</ProjectTitle>
+                                      <TechStack>{ stack }</TechStack>
+                                      <p>{project.desc}</p>
+                                      <p><Link to={project.liveUrl} target="_blank" rel="noopener noreferrer">Live</Link> | <Link to={project.githubUrl} target="_blank" rel="noopener noreferrer">Github</Link></p>
+                                    </TextCard>
                                 </li>
                             )
                         })
