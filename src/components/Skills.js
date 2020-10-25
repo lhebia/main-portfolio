@@ -46,10 +46,6 @@ export default function Skills() {
                               <li>
                                 <TechStack>{skill.skillName}</TechStack>
                               </li>
-                              // <li>
-                              //     <p>{skill.skillName}</p>
-                              //     { skill.icon }
-                              // </li>
                             )
                         })
                     }

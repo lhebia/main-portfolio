@@ -14,7 +14,6 @@ const FlexedHeader = styled.header`
     z-index: 1000;
     background-color: ${siteVars.offWhite};
     transition: .2s ease;
-    // border-bottom: 1px solid ${siteVars.lightGrey};
 `;
 
 const HeaderH1 = styled.h1`

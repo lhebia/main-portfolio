@@ -10,7 +10,6 @@ export const siteVars = {
   mainText: "#100b00",
   mainHighlight: "#145c9e",
   offWhite: "#fafafa",
-  // lightGrey: "#dbd9d9",
   lightGrey: "#fafafa",
   boxShadow: "0px 10px 20px 0px rgba(0,0,0,0.05)",
   borderRadius: "5px",
@@ -84,9 +83,6 @@ export const ButtonStyle = styled.button`
   background-color: ${siteVars.mainHighlight};
   color: ${siteVars.offWhite};
   border: 1px solid ${siteVars.mainHighlight};
-  // background-color: ${siteVars.offWhite};
-  // border: 1px solid ${siteVars.mainHighlight};
-  // color: ${siteVars.mainHighlight};
   opacity: 0.86;
   transition: all 0.2s;
   &:hover,
@@ -94,9 +90,6 @@ export const ButtonStyle = styled.button`
     background-color: ${siteVars.offWhite};
     border: 1px solid ${siteVars.mainHighlight};
     color: ${siteVars.mainHighlight};
-    // background-color: ${siteVars.mainHighlight};
-    // color: ${siteVars.offWhite};
-    // border: 1px solid ${siteVars.mainHighlight};
   }
 `;
 

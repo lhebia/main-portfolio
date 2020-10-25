@@ -18,9 +18,6 @@ const AboutContainer = styled.section`
       width: 100%;
       padding: 4rem 1rem;
     }
-    // @media (max-width: 420px) {
-    //   padding: 1rem;
-    // }
     h2 {
       font-size: 4rem;
       line-height: 4.6rem;

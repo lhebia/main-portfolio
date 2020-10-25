@@ -13,7 +13,7 @@ const NotFound = () => {
         <PageSection
           css={css`
             text-align: center;
-            min-height: 80vh;
+            min-height: 75vh;
             h1,
             p {
               line-height: 3rem;

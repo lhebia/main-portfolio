@@ -27,7 +27,6 @@ const SplashTitle = styled.p`
   }
   @media (max-width: 450px) {
     font-size: 3rem;
-    // text-align: center;
   }
 `
 

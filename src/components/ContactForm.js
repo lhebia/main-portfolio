@@ -59,7 +59,6 @@ const ContactForm = () => {
               id="name"
               onChange={handleLoginInput}
               value={loginInput.name}
-              // onFocus={console.log('** Focused **')}
             />
             <input
               type="text"
