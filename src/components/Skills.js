@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { FaHtml5 } from 'react-icons/fa';
 import { Wrapper, PageSection, SectionHeader, SectionSubHeader, TechStack } from '../styles/globalStyles';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -52,7 +51,6 @@ export default function Skills() {
                         skills.map(({ skillName }) => {
                             return (
                               <SkillsLi>
-                                <FaHtml5/>
                                 <TechStack>{skillName}</TechStack>
                               </SkillsLi>
                             )
