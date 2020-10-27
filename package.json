@@ -30,7 +30,8 @@
     "gatsby-source-contentful": "^2.3.51",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-icons": "^3.11.0"
   },
   "devDependencies": {
     "prettier": "2.1.2"

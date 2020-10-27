@@ -35,7 +35,10 @@ const AboutContainer = styled.section`
     p {
       font-size: 1.2rem;
       line-height: 1.8rem;
-      padding: 0.2rem;
+      padding: 2rem;
+      @media (max-width: 500px) {
+        padding: 0.2rem;
+      }
     }
   }
 `

@@ -8,12 +8,13 @@ import labeachsmall from '../assets/labeachsmall.jpg';
 import bloghandsmallA from '../assets/bloghandsmallA.jpg';
 
 const SplashSection = styled.section`
-    min-height: 85vh;
+    min-height: 65vh;
     background-color: ${siteVars.lightGrey};
     background-position: center;
     background-size: cover;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 10%;
     position: relative;
 `;
