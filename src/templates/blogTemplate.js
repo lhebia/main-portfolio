@@ -53,16 +53,22 @@ export default function blogTemplate(props) {
               border: 1px solid ${siteVars.mainHighlight};
               opacity: 0.86;
               transition: all 0.2s;
+              span {
+                display: none;
+              }
               &:hover,
               &:focus {
                 background-color: ${siteVars.offWhite};
                 border: 1px solid ${siteVars.mainHighlight};
                 color: ${siteVars.mainHighlight};
+                span {
+                  display: inline;
+                }
               }
             `}
             to="/blog"
           >
-            Back
+            <span role="img" aria-label="arrow back">←</span>Back
           </Link>
         </BlogPageSection>
       </Wrapper>
