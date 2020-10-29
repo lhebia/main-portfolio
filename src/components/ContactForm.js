@@ -26,9 +26,12 @@ const ContactForm = () => {
   const [loginInput, setLoginInput] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
     {
-      name: "Name *",
-      email: "Email *",
-      message: "Message *",
+      namePlaceholder: "Name *",
+      name: "",
+      emailPlaceholder: "Email *",
+      email: "",
+      messagePlaceholder: "Message *",
+      message: "",
     }
   )
 
@@ -59,6 +62,7 @@ const ContactForm = () => {
               id="name"
               onChange={handleLoginInput}
               value={loginInput.name}
+              placeholder={loginInput.namePlaceholder}
             />
             <input
               type="text"
@@ -66,6 +70,7 @@ const ContactForm = () => {
               id="email"
               onChange={handleLoginInput}
               value={loginInput.email}
+              placeholder={loginInput.emailPlaceholder}
             />
             <textarea
               id="message"
@@ -73,6 +78,7 @@ const ContactForm = () => {
               rows="5"
               cols="33"
               onChange={handleLoginInput}
+              placeholder={loginInput.messagePlaceholder}
             >
               {loginInput.message}
             </textarea>
