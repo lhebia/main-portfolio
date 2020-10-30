@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 import { Wrapper, PageSection, SectionHeader, SectionSubHeader, TechStack } from '../styles/globalStyles';
 import { useStaticQuery, graphql } from 'gatsby';
+import { BsCode } from 'react-icons/bs';
 
 const SkillsUl = styled.ul`
     display: grid;
@@ -22,6 +23,9 @@ const SkillsLi = styled.li`
     display: flex;
     justify-content: center;
     align-items: center;
+    p {
+        padding-left: 0.5rem;
+    }
 `;
 
 export default function Skills() {
@@ -50,7 +54,8 @@ export default function Skills() {
                     {
                         skills.map(({ skillName }) => {
                             return (
-                              <SkillsLi>
+                              <SkillsLi key={skillName}>
+                                <BsCode />
                                 <TechStack>{skillName}</TechStack>
                               </SkillsLi>
                             )

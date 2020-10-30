@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
@@ -93,15 +93,15 @@ const Projects = () => {
                                         overflow: hidden;
                                         border-radius: 5px 5px 0px 0px;
                                     `}>
-                                        <Link to={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                             <img src={project.imgName} alt={project.desc} />
-                                        </Link>
+                                        </a>
                                     </div>
                                     <TextCard>
                                       <ProjectTitle>{project.title}</ProjectTitle>
                                       <TechStack>{ stack }</TechStack>
                                       <p>{project.desc}</p>
-                                      <p><Link to={project.liveUrl} target="_blank" rel="noopener noreferrer">Live</Link> | <Link to={project.githubUrl} target="_blank" rel="noopener noreferrer">Github</Link></p>
+                                      <p><a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live</a> | <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">Github</a></p>
                                     </TextCard>
                                 </li>
                             )
