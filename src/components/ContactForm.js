@@ -79,9 +79,8 @@ const ContactForm = () => {
               cols="33"
               onChange={handleLoginInput}
               placeholder={loginInput.messagePlaceholder}
-            >
-              {loginInput.message}
-            </textarea>
+              value={loginInput.message}
+            />
             <input
               type="submit"
               value="Submit"
