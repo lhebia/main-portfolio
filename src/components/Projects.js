@@ -34,6 +34,9 @@ const ProjectUl = styled.ul`
   p {
     line-height: 1.4rem;
   }
+  p:last-of-type {
+    padding-top: 0.5rem;
+  }
 `
 
 const ProjectLink = styled.a`

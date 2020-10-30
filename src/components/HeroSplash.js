@@ -8,7 +8,7 @@ import labeachsmall from '../assets/labeachsmall.jpg';
 import bloghandsmallA from '../assets/bloghandsmallA.jpg';
 
 const SplashSection = styled.section`
-    min-height: 65vh;
+    min-height: 75vh;
     background-color: ${siteVars.lightGrey};
     background-position: center;
     background-size: cover;

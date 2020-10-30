@@ -20,24 +20,30 @@ const AboutContainer = styled.section`
     }
     h2 {
       font-size: 4rem;
-      line-height: 4.6rem;
+      line-height: 4.2rem;
+      padding: 0.5rem;
       @media (max-width: 420px) {
         font-size: 2.4rem;
-        line-height: 3rem;
+        line-height: 2.6rem;
       }
     }
     h3 {
       font-size: 2.4rem;
-      line-height: 3rem;
+      line-height: 2.6rem;
       color: ${siteVars.mainHighlight};
-      padding: 1rem 0;
+      padding: 0.5rem 0;
+      @media (max-width: 420px) {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
     }
     p {
       font-size: 1.2rem;
       line-height: 1.8rem;
-      padding: 2rem;
+      padding: 0.5rem;
       @media (max-width: 500px) {
         padding: 0.2rem;
+        font-size: 1rem;
       }
     }
   }
@@ -66,9 +72,9 @@ export default function About() {
           <h3>{data.site.siteMetadata.hero.subTitle}</h3>
           <p>{data.site.siteMetadata.hero.desc}</p>
           <LinkLikeButton css={css`
-            display: block;
-            width: 8rem;
-            margin: 1rem auto;
+            display: inline-block;
+            padding: 1rem;
+            margin: 0.5rem auto;
           `}href="#Contact">Contact Me</LinkLikeButton>
         </div>
       </AboutContainer>
