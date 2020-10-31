@@ -45,7 +45,11 @@ export default function blogTemplate(props) {
           <hr css={css`margin: 2rem 0;`}class="solid"></hr>
           <Link
             css={css`
-              padding: 0.5rem 0.7rem;
+              display: block;
+              padding: 0.5rem 0rem;
+              width: 6rem;
+              height: 2rem;
+              text-align: center;
               margin-top: 1rem;
               border-radius: 5px;
               background-color: ${siteVars.mainHighlight};
@@ -55,6 +59,7 @@ export default function blogTemplate(props) {
               transition: all 0.2s;
               span {
                 display: none;
+                width: 1rem;
               }
               &:hover,
               &:focus {
