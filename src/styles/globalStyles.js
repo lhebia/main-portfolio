@@ -115,3 +115,27 @@ export const TechStack = styled.p`
     line-height: 1.6rem;
     letter-spacing: 0.09rem;
 `;
+
+export const SplashSection = styled.section`
+    min-height: 75vh;
+    background-color: ${siteVars.lightGrey};
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    position: relative;
+`;
+
+export const SplashTitle = styled.p`
+  font-size: 7rem;
+  color: white;
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 5rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 3rem;
+  }
+`

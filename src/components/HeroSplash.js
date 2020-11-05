@@ -1,35 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { siteVars } from '../styles/globalStyles';
+import { SplashSection, SplashTitle } from '../styles/globalStyles';
 import labeachsmall from '../assets/labeachsmall.jpg';
 import bloghandsmallA from '../assets/bloghandsmallA.jpg';
-
-const SplashSection = styled.section`
-    min-height: 75vh;
-    background-color: ${siteVars.lightGrey};
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10%;
-    position: relative;
-`;
-
-const SplashTitle = styled.p`
-  font-size: 7rem;
-  color: white;
-  text-align: center;
-  @media (max-width: 768px) {
-    font-size: 5rem;
-  }
-  @media (max-width: 450px) {
-    font-size: 3rem;
-  }
-`
 
 const HeroSplash = ({ pageType }) => {
 
