@@ -94,7 +94,10 @@ const Header = ({ headerPosition, colorA, colorB }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent)
-  },)
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent)
+    }
+  })
 
     const data = useStaticQuery(graphql`
       query {
