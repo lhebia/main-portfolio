@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
+import SocialNav from './SocialNav';
 import { Wrapper, siteVars } from '../styles/globalStyles';
 
 const FooterP = styled.p`
@@ -11,14 +10,6 @@ const FooterP = styled.p`
     padding: 1rem 0.5rem;
     display: block;
     font-size: 0.86rem;
-`;
-
-const FooterUl = styled.ul`
-    display: flex;
-    li {
-        padding: 0.75rem;
-        font-size: 1.5rem;
-    }
 `;
 
 const Footer = () => {
@@ -40,35 +31,7 @@ const Footer = () => {
             }
           `}
         >
-          <FooterUl>
-            <li>
-              <a
-                href="https://github.com/lhebia"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/lhebia"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://linkedin.com/in/lhebia"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </li>
-          </FooterUl>
+          <SocialNav flexJustification="flex-start"/>
           <FooterP>
             Handcrafted with <a href="https://gatsbyjs.com" target="_blank"
                 rel="noopener noreferrer"> Gatsby </a> in twenty-twenty.

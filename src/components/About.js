@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import {css} from '@emotion/core';
 import { siteVars, LinkLikeButton } from '../styles/globalStyles';
+import SocialNav from './SocialNav';
 
 const AboutContainer = styled.section`
   display: flex;
@@ -71,6 +72,7 @@ export default function About() {
           <h2>{data.site.siteMetadata.hero.title}</h2>
           <h3>{data.site.siteMetadata.hero.subTitle}</h3>
           <p>{data.site.siteMetadata.hero.desc}</p>
+          <SocialNav flexJustification="center"/>
           <LinkLikeButton css={css`
             display: inline-block;
             padding: 1rem;
