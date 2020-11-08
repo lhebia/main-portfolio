@@ -39,7 +39,8 @@ export const BlogPageSection = styled.section`
     padding: 0.5rem 0;
   }
   img {
-    padding-top: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
   }
   p {
     line-height: 1.5rem;
@@ -50,6 +51,9 @@ export const BlogPageSection = styled.section`
     }
   }
   blockquote {
+    padding: 1rem 0;
+  }
+  blockquote p:first-of-type {
     font-size: 1.20112rem;
     line-height: 1.75rem;
     color: hsla(0,0%,0%,0.59);
