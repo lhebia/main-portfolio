@@ -9,10 +9,12 @@ import Head from '../components/Head';
 import HeroSplash from '../components/HeroSplash';
 
 const BlogUl = styled.ul`
-    text-align: center;
-    p {
-        padding: 0.3rem 0;
-    }
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  p {
+      padding: 0.3rem 0;
+  }
 `;
 
 const BlogLi = styled.li`

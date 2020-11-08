@@ -43,6 +43,7 @@ export default function blogTemplate(props) {
             options
           )}
           <hr css={css`margin: 2rem 0;`}class="solid"></hr>
+          <p>Written by Lawrence Hebia, a web developer from Toronto, Canada. <span role="img" aria-label="Peace symbol">✌🏼</span></p>
           <Link
             css={css`
               display: block;

@@ -38,10 +38,6 @@ export const BlogPageSection = styled.section`
     line-height: 1rem;
     padding: 0.5rem 0;
   }
-  img {
-    margin-top: 1rem;
-    border-radius: 5px;
-  }
   p {
     line-height: 1.5rem;
     padding: 1rem 0;
@@ -49,6 +45,16 @@ export const BlogPageSection = styled.section`
       font-style: italic;
       font-size: 0.9rem;
     }
+  }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    background-color: ${siteVars.offWhite};
+    line-height: 1.7rem;
+  }
+  img {
+    margin-top: 1rem;
+    border-radius: 5px;
   }
   blockquote {
     padding: 1rem 0;
