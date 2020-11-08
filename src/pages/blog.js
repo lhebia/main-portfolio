@@ -62,7 +62,7 @@ const Blog = () => {
                     <p css={css`
                       text-align: center;
                       margin-bottom: 4rem;
-                    `}>A few stories, mostly about web development, parenting and sometimes burgers <span role="img" aria-label="Burger">🍔</span>.</p>
+                    `}>A handbook, written by me, about web development, parenting and <span role="img" aria-label="Burger">🍔</span>.</p>
                     <BlogUl>
                         {
                             posts.map(post => {

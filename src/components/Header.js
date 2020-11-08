@@ -47,24 +47,24 @@ const FlexedUl = styled.ul`
     padding: 0 0.5rem;
     position: relative;
   }
-  a::after {
-    content: "";
-    position: absolute;
-    top: 1.5rem;
-    left: 50%;
-    width: 10%;
-    z-index: -1;
-    height: 0.2rem;
-    background-color: ${siteVars.mainHighlight};
-    opacity: 0;
-    transition: 0.2s ease;
-  }
-  a:hover::after {
-    left: 10%;
-    opacity: 1;
-    width: 80%;
-  }
-  a:nth-of-type(3):hover::after {
+  // a::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 1.5rem;
+  //   left: 50%;
+  //   width: 10%;
+  //   z-index: -1;
+  //   height: 0.2rem;
+  //   background-color: ${siteVars.mainHighlight};
+  //   opacity: 0;
+  //   transition: 0.2s ease;
+  // }
+  // a:hover::after {
+  //   left: 10%;
+  //   opacity: 1;
+  //   width: 80%;
+  // }
+  a:nth-child(3):hover::after {
     opacity: 0;
   }
   @media (max-width: 450px) {
@@ -148,7 +148,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
                 <Link to="/blog">Blog</Link>
               </li>
               <li>
-                {/* <Link
+                <a
                   css={css`
                     padding: 0.5rem 0.7rem;
                     margin-top: 1rem;
@@ -164,11 +164,16 @@ const Header = ({ headerPosition, colorA, colorB }) => {
                       border: 1px solid ${siteVars.mainHighlight};
                       color: ${siteVars.mainHighlight} !important;
                     }
+                    &:hover::after {
+                      opacity: 0;
+                    }
                   `}
-                  to="/#Contact"
+                  href="https://google.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
-                  Contact
-                </Link> */}
+                  Resume
+                </a>
               </li>
             </FlexedUl>
           </nav>
