@@ -12,9 +12,13 @@ const AboutContainer = styled.section`
   align-items: center;
   div {
     text-align: center;
-    width: 75%;
+    width: 50%;
     max-width: 1200px;
     padding: 6rem 0 3rem;
+    @media (max-width: 1000px) {
+      width: 75%;
+      padding: 4rem 1rem;
+    }
     @media (max-width: 500px) {
       width: 100%;
       padding: 4rem 1rem;
