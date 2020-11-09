@@ -13,7 +13,7 @@ const SkillsUl = styled.ul`
     li {
         text-align: center;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 500px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }

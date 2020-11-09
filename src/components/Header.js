@@ -168,7 +168,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
                       opacity: 0;
                     }
                   `}
-                  href="https://google.com"
+                  href={'Lawrence-Hebia-Resume-2020-1-3.pdf'}
                   target="_blank"
                   rel="noreferrer noopener"
                 >
