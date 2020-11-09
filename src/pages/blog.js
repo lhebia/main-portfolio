@@ -62,6 +62,8 @@ const Blog = () => {
                       line-height: 4.6rem;
                     `}>Blog</SectionHeader>
                     <p css={css`
+                      font-size: 1.5rem;
+                      line-height: 2.1rem;
                       text-align: center;
                       margin-bottom: 4rem;
                     `}>A handbook, written by me, about web development, parenting and <span role="img" aria-label="Burger">🍔</span>.</p>
