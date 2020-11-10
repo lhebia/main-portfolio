@@ -150,7 +150,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
               <li>
                 <a
                   css={css`
-                    padding: 0.5rem 0.7rem;
+                    padding: 0.4rem 0.6rem;
                     margin-top: 1rem;
                     border-radius: 5px;
                     background-color: ${siteVars.mainHighlight};
@@ -168,11 +168,11 @@ const Header = ({ headerPosition, colorA, colorB }) => {
                       opacity: 0;
                     }
                   `}
-                  href={'Lawrence-Hebia-Resume-2020-1-3.pdf'}
+                  href="mailto:lawrencehebia@gmail.com"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  Resume
+                  Contact
                 </a>
               </li>
             </FlexedUl>

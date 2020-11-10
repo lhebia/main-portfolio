@@ -77,18 +77,18 @@ export default function About() {
           <h3>{data.site.siteMetadata.hero.subTitle}</h3>
           <p>{data.site.siteMetadata.hero.desc}</p>
           <SocialNav flexJustification="center"/>
-          <LinkLikeButton 
+          {/* <LinkLikeButton 
             css={css`
               display: inline-block;
               padding: 1rem;
               margin: 0.5rem auto;
             `}
-            href={'Lawrence-Hebia-Resume-2020-1-3.pdf'}
+            href="mailto:lawrencehebia@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download CV
-          </LinkLikeButton>
+            Contact
+          </LinkLikeButton> */}
         </div>
       </AboutContainer>
     )
