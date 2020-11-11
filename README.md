@@ -1,4 +1,4 @@
-# Lawrence Hebia Portfolio V2
+# Lawrence Hebia Portfolio 2.0
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/214b7e53-b32c-4c78-8617-d755ff2e91a0/deploy-status)](https://app.netlify.com/sites/lhebiaportfolio/deploys)
 
