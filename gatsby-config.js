@@ -62,14 +62,14 @@ module.exports = {
         githubUrl: "https://github.com/TobiKobeRalphAndNull/project-six",
       },
       {
-        title: "Fun Place",
-        imgName: "fp.jpg",
-        tech: ["HTML5", "CSS3", "Responsive"],
+        title: "LawrenceHebia.com",
+        imgName: "lhp.jpg",
+        tech: ["HTML5", "CSS3", "JavaScript"],
         desc:
-          "A multipage, fully responsive PSD conversion of the Fun Place design.",
-        shortDesc: "Fun Place PSD conversion.",
-        liveUrl: "https://lhebia.github.io/lawrence-hebia-project-two/",
-        githubUrl: "https://github.com/lhebia/lawrence-hebia-project-two",
+          "The first iteration of my portfolio, converted from a PSD design.",
+        shortDesc: "Lawrence Hebia portfolio",
+        liveUrl: "https://lhebiaportfoliov1.netlify.app/",
+        githubUrl: "https://github.com/lhebia/portfolio",
       },
     ],
     skills: [
