@@ -62,11 +62,11 @@ module.exports = {
         githubUrl: "https://github.com/TobiKobeRalphAndNull/project-six",
       },
       {
-        title: "LawrenceHebia.com",
+        title: "Portfolio V1",
         imgName: "lhp.jpg",
         tech: ["HTML5", "CSS3", "JavaScript"],
         desc:
-          "The first iteration of my portfolio, converted from a PSD design.",
+          "The first iteration of my portfolio (this site), converted from a PSD design.",
         shortDesc: "Lawrence Hebia portfolio",
         liveUrl: "https://lhebiaportfoliov1.netlify.app/",
         githubUrl: "https://github.com/lhebia/portfolio",

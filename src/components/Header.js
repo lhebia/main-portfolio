@@ -19,7 +19,7 @@ const FlexedHeader = styled.header`
 const HeaderH1 = styled.h1`
   text-transform: lowercase;
   font-size: 1.5rem;
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     font-size: 0;
   }
 `;

@@ -1,8 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import {css} from '@emotion/core';
-import { siteVars, LinkLikeButton } from '../styles/globalStyles';
+import { siteVars } from '../styles/globalStyles';
 import SocialNav from './SocialNav';
 
 const AboutContainer = styled.section`
@@ -77,18 +76,6 @@ export default function About() {
           <h3>{data.site.siteMetadata.hero.subTitle}</h3>
           <p>{data.site.siteMetadata.hero.desc}</p>
           <SocialNav flexJustification="center"/>
-          {/* <LinkLikeButton 
-            css={css`
-              display: inline-block;
-              padding: 1rem;
-              margin: 0.5rem auto;
-            `}
-            href="mailto:lawrencehebia@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Contact
-          </LinkLikeButton> */}
         </div>
       </AboutContainer>
     )

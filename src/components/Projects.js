@@ -7,16 +7,19 @@ import { Wrapper, PageSection, SectionHeader, siteVars, SectionSubHeader, TechSt
 
 const ProjectUl = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
-  @media (max-width: 900px) {
+  @media (max-width: 1068px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+  @media (max-width: 650px) {
     grid-template-columns: 1fr;
   }
   li {
-    padding: 0 0 1rem 0;
+    // padding: 0 0 1rem 0;
     text-align: left;
     box-shadow: ${siteVars.boxShadow};
     border-radius: 5px 5px 5px 5px;
@@ -51,8 +54,8 @@ const ProjectLink = styled.a`
 const ProjectTitle = styled.p`
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.05rem;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
   padding: 1rem 0;
 `;
 
@@ -93,6 +96,7 @@ const Projects = () => {
                             
                             return (
                                 <li key={project.title}>
+                                  <article>
                                     <div css={css`
                                         overflow: hidden;
                                         border-radius: 5px 5px 0px 0px;
@@ -102,7 +106,6 @@ const Projects = () => {
                                         </a>
                                     </div>
                                     <TextCard>
-                                      
                                       <ProjectTitle>
                                         <ProjectLink href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                         {project.title}
@@ -112,6 +115,7 @@ const Projects = () => {
                                       <p>{project.desc}</p>
                                       <p><ProjectLink href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live</ProjectLink> | <ProjectLink href={project.githubUrl} target="_blank" rel="noopener noreferrer">Github</ProjectLink></p>
                                     </TextCard>
+                                  </article>
                                 </li>
                             )
                         })
