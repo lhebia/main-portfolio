@@ -4,14 +4,14 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import Layout from '../components/Layout';
-import { Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
+import { siteVars, Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
 import Head from '../components/Head';
 import HeroSplash from '../components/HeroSplash';
 
 const BlogUl = styled.ul`
   // display: grid;
   // grid-template-columns: repeat(3, 1fr);
-  text-align: center;
+  text-align: left;
   p {
       padding: 0.3rem 0;
   }
@@ -19,12 +19,22 @@ const BlogUl = styled.ul`
 
 const BlogLi = styled.li`
     padding: 1rem;
+    width: 60%;
+    margin: 2rem auto;
+    border-radius: ${siteVars.borderRadius};
+    box-shadow: ${siteVars.boxShadow};
+    @media (max-width: 850px) {
+      width: 80%;
+    }
+    @media (max-width: 650px) {
+      width: 100%;
+    }
 `;
 
 const BlogTitle = styled.p`
     display: inline;
     font-size: 1.5rem;
-    line-height: 1.8rem;
+    line-height: 2.0rem;
     font-weight: bold;
 `;
 
@@ -82,6 +92,12 @@ const Blog = () => {
                                       {post.node.publishedDate}
                                     </TitleDate>
                                     <p>{post.node.description}</p>
+                                    <Link
+                                      to={`/blog/${post.node.slug}`}
+                                      key={post.node.slug}
+                                    >
+                                      <p>Read post</p>
+                                    </Link>
                                   </BlogLi>
                                 )
                             })
