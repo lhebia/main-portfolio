@@ -107,7 +107,7 @@ const setup = css`
     line-height: 1;
   }
   ol {
-    list-style-type: circle;
+    list-style-type: number;
   }
   ul {
     list-style: none;

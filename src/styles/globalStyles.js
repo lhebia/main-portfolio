@@ -31,7 +31,7 @@ export const BlogPageSection = styled.section`
   h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     line-height: 2rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0;
   }
   p:first-of-type {
     font-size: 0.9rem;
