@@ -17,6 +17,9 @@ const SkillsUl = styled.ul`
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
+    @media (max-width: 320px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 const SkillsLi = styled.li`
