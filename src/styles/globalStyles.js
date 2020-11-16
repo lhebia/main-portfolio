@@ -135,13 +135,14 @@ export const SplashSection = styled.section`
     background-position: center;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 10%;
     position: relative;
 `;
 
-export const SplashTitle = styled.p`
+export const SplashTitle = styled.h1`
   font-size: 7rem;
   color: white;
   text-align: center;
@@ -150,5 +151,17 @@ export const SplashTitle = styled.p`
   }
   @media (max-width: 450px) {
     font-size: 3rem;
+  }
+`
+
+export const SplashSubTitle = styled.h2`
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 1rem;
   }
 `

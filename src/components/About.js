@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
-import { siteVars } from '../styles/globalStyles';
 import SocialNav from './SocialNav';
 
 const AboutContainer = styled.section`
@@ -22,24 +21,10 @@ const AboutContainer = styled.section`
       width: 100%;
       padding: 4rem 1rem;
     }
-    h2 {
-      font-size: 4rem;
-      line-height: 4.2rem;
-      padding: 0.5rem;
-      @media (max-width: 420px) {
-        font-size: 2.4rem;
-        line-height: 2.6rem;
-      }
-    }
     h3 {
-      font-size: 2.4rem;
-      line-height: 2.6rem;
-      color: ${siteVars.mainHighlight};
+      font-size: 2.6rem;
+      line-height: 3.2rem;
       padding: 0.5rem 0;
-      @media (max-width: 420px) {
-        font-size: 1.8rem;
-        line-height: 2rem;
-      }
     }
     p {
       font-size: 1.2rem;
@@ -72,8 +57,8 @@ export default function About() {
     return (
       <AboutContainer>
         <div>
-          <h2>{data.site.siteMetadata.hero.title}</h2>
-          <h3>{data.site.siteMetadata.hero.subTitle}</h3>
+          {/* <h2>{data.site.siteMetadata.hero.title}</h2> */}
+          <h3>{data.site.siteMetadata.hero.title}</h3>
           <p>{data.site.siteMetadata.hero.desc}</p>
           <SocialNav flexJustification="center"/>
         </div>

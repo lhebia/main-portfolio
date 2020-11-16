@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "lawrence hebia",
+    title: "lawrencehebia",
     headTitle: "Lawrence Hebia",
     author: "Lawrence Hebia",
     desc: "Lawrence Web Developer",
@@ -8,7 +8,7 @@ module.exports = {
       title: "Hi 👋, I'm Lawrence",
       subTitle: "Front-End Web Developer",
       desc:
-        "A front-end developer with experience building applications in React, JavaScript, Express, JQuery, HTML5, CSS3. I'm currently looking for an organization whose purpose I support and who can help me flourish as someone trying to do what they love, everyday.",
+        "A constantly iterating, front-end web developer with experience building applications in React, JavaScript, Express, JQuery, HTML5, CSS3. I'm currently looking for an organization whose purpose I support and who can help me flourish as someone trying to do what they love, everyday.",
     },
     projects: [
       {

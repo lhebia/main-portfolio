@@ -16,7 +16,7 @@ const FlexedHeader = styled.header`
     transition: .2s ease;
 `;
 
-const HeaderH1 = styled.h1`
+const HeaderTitle = styled.p`
   text-transform: lowercase;
   font-size: 1.5rem;
   @media (max-width: 650px) {
@@ -136,7 +136,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
               <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
             </Link>
             <Link to="/">
-              <HeaderH1>{data.site.siteMetadata.title}</HeaderH1>
+              <HeaderTitle>{data.site.siteMetadata.title}</HeaderTitle>
             </Link>
           </FlexedDiv>
           <nav>

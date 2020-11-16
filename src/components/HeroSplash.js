@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { SplashSection, SplashTitle } from '../styles/globalStyles';
-import labeachsmall from '../assets/labeachsmall.jpg';
+import { SplashSection, SplashTitle, SplashSubTitle } from '../styles/globalStyles';
+import lightskyblue from '../assets/lightskyblue.jpg';
 import bloghandsmallA from '../assets/bloghandsmallA.jpg';
 
 const HeroSplash = ({ pageType }) => {
@@ -14,7 +14,7 @@ const HeroSplash = ({ pageType }) => {
         if (pageType === 'blog') {
             setBackground(bloghandsmallA);
         } else {
-            setBackground(labeachsmall);
+            setBackground(lightskyblue);
         }
     },[pageType])
     
@@ -33,6 +33,7 @@ const HeroSplash = ({ pageType }) => {
             background-image: url(${background});        
         `}>
             <SplashTitle>{data.site.siteMetadata.headTitle}</SplashTitle>
+            <SplashSubTitle>Front End Web Developer</SplashSubTitle>
         </SplashSection>
     )
 }
