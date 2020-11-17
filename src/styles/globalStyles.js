@@ -144,6 +144,7 @@ export const SplashSection = styled.section`
 
 export const SplashTitle = styled.h1`
   font-size: 7rem;
+  font-weight: bold;
   color: white;
   text-align: center;
   @media (max-width: 768px) {
@@ -156,6 +157,7 @@ export const SplashTitle = styled.h1`
 
 export const SplashSubTitle = styled.h2`
   font-size: 3rem;
+  font-weight: bold;
   color: white;
   text-align: center;
   @media (max-width: 768px) {
