@@ -83,7 +83,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
   const listenScrollEvent = e => {
     if (window.scrollY > 0) {
       setShadow(`${siteVars.boxShadow}`);
-      setOpacity(1);
+      setOpacity(0.88);
       setColor(colorB);
     } else {
       setShadow(`none`);
@@ -115,6 +115,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
           position: ${headerPosition};
           box-shadow: ${shadow};
           background-color: rgba(250, 250, 250, ${opacity});
+          backdrop-filter: ${ opacity ? 'saturate(180%) blur(24px)' : null };
           a {
             color: ${color};
           }
