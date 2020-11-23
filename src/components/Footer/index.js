@@ -1,26 +1,13 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import SocialNav from './SocialNav';
-import { Wrapper, siteVars } from '../styles/globalStyles';
-
-const FooterP = styled.p`
-    text-align: center;
-    padding: 1rem 0.5rem;
-    display: block;
-    font-size: 0.86rem;
-`;
+import SocialNav from '../SocialNav';
+import { Wrapper  } from '../../styles/globalStyles';
+import { StyledFooter, FooterP } from './footerStyles';
 
 const Footer = () => {
     return (
-      <footer
-        css={css`
-          background-color: ${siteVars.offWhite};
-          padding: 2rem 0;
-          margin-top: 2rem;
-        `}
-      >
+      <StyledFooter>
         <Wrapper
           css={css`
             display: flex;
@@ -37,7 +24,7 @@ const Footer = () => {
                 rel="noopener noreferrer"> Gatsby </a> in twenty-twenty.
           </FooterP>
         </Wrapper>
-      </footer>
+      </StyledFooter>
     )
 }
 

@@ -1,6 +1,5 @@
 import React, { useReducer } from 'react';
 import { css } from '@emotion/core';
-import styled from '@emotion/styled';
 
 import { Wrapper, SectionHeader, PageSection, siteVars, SectionSubHeader } from '../../styles/globalStyles';
 import { PortfolioForm } from './PortfolioForm';

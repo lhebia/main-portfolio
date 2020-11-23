@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import { siteVars } from '../../styles/globalStyles';
+
 export const PortfolioForm = styled.form`
   display: flex;
   flex-direction: column;
