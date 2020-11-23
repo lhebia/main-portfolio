@@ -2,24 +2,9 @@ import React, { useReducer } from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import { Wrapper, SectionHeader, PageSection, siteVars, SectionSubHeader } from '../styles/globalStyles';
+import { Wrapper, SectionHeader, PageSection, siteVars, SectionSubHeader } from '../../styles/globalStyles';
+import { PortfolioForm } from './PortfolioForm';
 
-const PortfolioForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  input,
-  textarea {
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border-radius: 5px;
-    border: 1px solid ${siteVars.mainText};
-    font-family: -apple-system, "Roboto", sans-serif;
-  }
-  @media (max-width:768px) {
-    width: 100%;
-  }
-`
 
 const ContactForm = () => {
 
