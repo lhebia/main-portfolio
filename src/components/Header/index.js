@@ -1,78 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core';
 
-import dp36 from '../assets/dp36.png';
-import setup from '../styles/setup';
-import { Wrapper, siteVars } from '../styles/globalStyles';
-
-const FlexedHeader = styled.header`
-    padding: 1.2rem 0;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    background-color: ${siteVars.offWhite};
-    transition: .2s ease;
-`;
-
-const HeaderTitle = styled.p`
-  text-transform: lowercase;
-  font-size: 1.5rem;
-  @media (max-width: 650px) {
-    font-size: 0;
-  }
-`;
-
-const HeaderImg = styled.img`
-  padding-right: 1rem;
-  padding-bottom: 0.2rem;
-  transition: all .2s;
-  &:hover {
-      opacity: 0.6;
-  }
-`
-
-const FlexedDiv = styled.div`
-    display: flex;
-    align-items: center;
-`;
-
-const FlexedUl = styled.ul`
-  display: flex;
-  list-style-type: none;
-  font-size: 1.2rem;
-  align-items: center;
-  li {
-    padding: 0 0.5rem;
-    position: relative;
-  }
-  // a::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 1.5rem;
-  //   left: 50%;
-  //   width: 10%;
-  //   z-index: -1;
-  //   height: 0.2rem;
-  //   background-color: ${siteVars.mainHighlight};
-  //   opacity: 0;
-  //   transition: 0.2s ease;
-  // }
-  // a:hover::after {
-  //   left: 10%;
-  //   opacity: 1;
-  //   width: 80%;
-  // }
-  a:nth-child(3):hover::after {
-    opacity: 0;
-  }
-  @media (max-width: 450px) {
-    a {
-      font-size: 1.2rem;
-    }
-  }
-`
+import dp36 from '../../assets/dp36.png';
+import setup from '../../styles/setup';
+import { Wrapper, siteVars } from '../../styles/globalStyles';
+import FlexedHeader, { HeaderTitle, HeaderImg, FlexedDiv, FlexedUl } from './FlexedHeader';
 
 const Header = ({ headerPosition, colorA, colorB }) => {
 

@@ -33,7 +33,7 @@ const HeroSplash = ({ pageType }) => {
             background-image: url(${background});        
         `}>
             <SplashTitle>{data.site.siteMetadata.headTitle}</SplashTitle>
-            <SplashSubTitle>Front End Web Developer</SplashSubTitle>
+            <SplashSubTitle>Front End Web Developer <span role="img" aria-label="Male Technologist">👨🏻‍💻</span></SplashSubTitle>
         </SplashSection>
     )
 }

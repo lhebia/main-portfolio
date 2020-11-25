@@ -157,6 +157,10 @@ export const SplashTitle = styled.h1`
 
 export const SplashSubTitle = styled.h2`
   font-size: 3rem;
+  span {
+    font-size: 2.5rem;
+    vertical-align: middle;
+  }
   font-weight: bold;
   color: white;
   text-align: center;
