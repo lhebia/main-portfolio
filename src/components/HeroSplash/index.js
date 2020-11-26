@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { SplashSection, SplashTitle, SplashSubTitle } from '../styles/globalStyles';
-import lightskyblue from '../assets/lightskyblue.jpg';
-import bloghandsmallA from '../assets/bloghandsmallA.jpg';
+import { SplashSection, SplashTitle, SplashSubTitle } from '../../styles/globalStyles';
+import lightskyblue from '../../assets/lightskyblue.jpg';
+import bloghandsmallA from '../../assets/bloghandsmallA.jpg';
 
 const HeroSplash = ({ pageType }) => {
 
