@@ -114,6 +114,7 @@ const Blog = () => {
                           width: 100px; 
                           margin: 0 auto; 
                           display: block;
+                          padding-top: 2rem;
                         `} 
                         alt='Powered by Contentful' />
                     </a>
