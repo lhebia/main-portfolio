@@ -1,67 +1,9 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { Wrapper, PageSection, SectionHeader, siteVars, SectionSubHeader, TechStack } from '../styles/globalStyles';
-
-const ProjectUl = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  @media (max-width: 1068px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 768px) {
-    gap: 1rem;
-  }
-  @media (max-width: 650px) {
-    grid-template-columns: 1fr;
-  }
-  li {
-    // padding: 0 0 1rem 0;
-    text-align: left;
-    box-shadow: ${siteVars.boxShadow};
-    border-radius: 5px 5px 5px 5px;
-  }
-  img {
-    border-radius: 5px 5px 0px 0px;
-    transition: all 0.6s;
-    opacity: 1;
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
-      opacity: 0.46;
-    }
-  }
-  p {
-    line-height: 1.4rem;
-  }
-  p:last-of-type {
-    padding-top: 0.5rem;
-  }
-`
-
-const ProjectLink = styled.a`
-  font-weight: bold;
-  color: ${siteVars.mainHighlight};
-  &:hover,
-  &:focus {
-    opacity: 0.4;
-  }
-`;
-
-const ProjectTitle = styled.p`
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.05rem;
-  font-size: 1.4rem;
-  line-height: 2rem;
-  padding: 1rem 0;
-`;
-
-const TextCard = styled.div`
-  padding: 1rem;
-`;
+import { TextCard, ProjectTitle, ProjectLink, ProjectUl } from './styles';
+import { Wrapper, PageSection, SectionHeader, SectionSubHeader, TechStack } from '../../styles/globalStyles';
 
 const Projects = () => {
     const data = useStaticQuery(graphql`
