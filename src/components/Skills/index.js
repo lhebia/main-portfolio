@@ -1,25 +1,12 @@
 import React from 'react';
 
 import { Wrapper, PageSection, SectionHeader, SectionSubHeader, TechStack } from '../../styles/globalStyles';
-import { useStaticQuery, graphql } from 'gatsby';
+import { data } from './query';
 import { BsCode } from 'react-icons/bs';
 
 import { SkillsUl, SkillsLi } from './styles';
 
 export default function Skills() {
-
-    const data = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                    skills {
-                        icon
-                        skillName
-                    }
-                }
-            }
-        }
-    `);
 
     const skills = data.site.siteMetadata.skills;
 
