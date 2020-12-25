@@ -21,7 +21,7 @@ const Footer = () => {
           <SocialNav flexJustification="flex-start"/>
           <FooterP>
             Handcrafted with <a href="https://gatsbyjs.com" target="_blank"
-                rel="noopener noreferrer"> Gatsby </a> in twenty-twenty.
+                rel="noopener noreferrer"> Gatsby </a> in {new Date().getFullYear()}.
           </FooterP>
         </Wrapper>
       </StyledFooter>

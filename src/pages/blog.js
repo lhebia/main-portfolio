@@ -1,20 +1,23 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { 
+  useStaticQuery, 
+  graphql, 
+  Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import Layout from '../components/Layout';
-import { siteVars, Wrapper, PageSection, SectionHeader } from '../styles/globalStyles';
+import { 
+  siteVars, 
+  Wrapper, 
+  PageSection, 
+  SectionHeader
+} from '../styles/globalStyles';
 import Head from '../components/Head';
 import HeroSplash from '../components/HeroSplash';
 
 const BlogUl = styled.ul`
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
   text-align: left;
-  p {
-      padding: 0.3rem 0;
-  }
 `;
 
 const BlogLi = styled.li`
@@ -34,12 +37,20 @@ const BlogLi = styled.li`
 const BlogTitle = styled.p`
     display: inline;
     font-size: 1.5rem;
-    line-height: 2.0rem;
+    line-height: 2rem;
     font-weight: bold;
+    padding-bottom: 1rem;
+`;
+
+const BlogDescription = styled.p`
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 1rem 0 2rem;
 `;
 
 const TitleDate = styled.p`
     font-size: 0.8rem;
+    padding: 0.5rem 0;
 `;
 
 const Blog = () => {
@@ -91,7 +102,7 @@ const Blog = () => {
                                     <TitleDate>
                                       {post.node.publishedDate}
                                     </TitleDate>
-                                    <p>{post.node.description}</p>
+                                    <BlogDescription>{post.node.description}</BlogDescription>
                                     <Link
                                       to={`/blog/${post.node.slug}`}
                                       key={post.node.slug}
@@ -116,7 +127,8 @@ const Blog = () => {
                           display: block;
                           padding-top: 2rem;
                         `} 
-                        alt='Powered by Contentful' />
+                        alt='Powered by Contentful' 
+                      />
                     </a>
                 </PageSection>
             </Wrapper>

@@ -124,22 +124,22 @@ export const LinkLikeButton = styled.a`
 `;
 
 export const TechStack = styled.p`
-    font-family: 'Ubuntu', sans-serif;
-    line-height: 1.6rem;
-    letter-spacing: 0.09rem;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.6rem;
+  letter-spacing: 0.09rem;
 `;
 
 export const SplashSection = styled.section`
-    min-height: 86vh;
-    background-color: ${siteVars.lightGrey};
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10%;
-    position: relative;
+  min-height: 86vh;
+  background-color: ${siteVars.lightGrey};
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  position: relative;
 `;
 
 export const SplashTitle = styled.h1`
