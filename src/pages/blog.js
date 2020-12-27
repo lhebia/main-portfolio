@@ -8,7 +8,7 @@ import { css } from '@emotion/core';
 
 import Layout from '../components/Layout';
 import { 
-  siteVars, 
+  siteVars as S, 
   Wrapper, 
   PageSection, 
   SectionHeader
@@ -24,8 +24,9 @@ const BlogLi = styled.li`
     padding: 1rem;
     width: 60%;
     margin: 2rem auto;
-    border-radius: ${siteVars.borderRadius};
-    box-shadow: ${siteVars.boxShadow};
+    border: 1px solid #ededed;
+    border-radius: ${S.borderRadius};
+    box-shadow: ${S.boxShadow};
     @media (max-width: 850px) {
       width: 80%;
     }

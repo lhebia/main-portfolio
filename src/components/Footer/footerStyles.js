@@ -12,4 +12,5 @@ export const StyledFooter = styled.footer`
     background-color: ${siteVars.offWhite};
     padding: 2rem 0;
     margin-top: 2rem;
+    border-top: 1px solid #ededed;
 `;

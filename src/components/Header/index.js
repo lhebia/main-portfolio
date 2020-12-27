@@ -49,6 +49,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
           box-shadow: ${shadow};
           background-color: rgba(250, 250, 250, ${opacity});
           backdrop-filter: ${ opacity ? 'saturate(180%) blur(24px)' : null };
+          border-bottom: ${ opacity ? '1px solid #ededed' : null };
           a {
             color: ${color};
           }
