@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { siteVars } from '../../styles/globalStyles';
+import { siteVars as S } from '../../styles/globalStyles';
 
 export const FooterP = styled.p`
     text-align: center;
@@ -9,7 +9,7 @@ export const FooterP = styled.p`
 `;
 
 export const StyledFooter = styled.footer`
-    background-color: ${siteVars.offWhite};
+    background-color: ${S.offWhite};
     padding: 2rem 0;
     margin-top: 2rem;
     border-top: 1px solid #ededed;

@@ -24,7 +24,7 @@ const BlogLi = styled.li`
     padding: 1rem;
     width: 60%;
     margin: 2rem auto;
-    border: 1px solid #ededed;
+    border: ${S.border};
     border-radius: ${S.borderRadius};
     box-shadow: ${S.boxShadow};
     @media (max-width: 850px) {

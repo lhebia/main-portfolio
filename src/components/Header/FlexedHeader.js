@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
-import { siteVars } from '../../styles/globalStyles';
+import { siteVars as S } from '../../styles/globalStyles';
 
 const FlexedHeader = styled.header`
-    padding: 1.2rem 0;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    background-color: ${siteVars.offWhite};
-    transition: .2s ease;
+  padding: 1.2rem 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: ${S.offWhite};
+  transition: .2s ease;
 `;
 
 export const HeaderTitle = styled.p`
@@ -41,7 +41,7 @@ export const FlexedUl = styled.ul`
     padding: 0 0.5rem;
     position: relative;
   }
-  a:nth-child(3):hover::after {
+  a:nth-of-type(3):hover::after {
     opacity: 0;
   }
   @media (max-width: 450px) {

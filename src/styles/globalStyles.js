@@ -12,6 +12,7 @@ export const siteVars = {
   offWhite: "#fafafa",
   lightGrey: "#fafafa",
   boxShadow: "0px 10px 20px 0px rgba(0,0,0,0.05)",
+  border: "1px solid #ededed",
   borderRadius: "5px",
 };
 

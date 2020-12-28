@@ -37,7 +37,11 @@ const Projects = () => {
                             const stack = project.tech.join(' | ');
                             
                             return (
-                                <li key={project.title}>
+                                <li key={project.title}
+                                    css={css`
+                                        border: 1px solid #ededed;
+                                    `}
+                                >
                                   <article>
                                     <div css={css`
                                         overflow: hidden;

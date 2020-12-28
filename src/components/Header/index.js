@@ -4,8 +4,13 @@ import { Global, css } from '@emotion/core';
 
 import dp36 from '../../assets/dp36.png';
 import setup from '../../styles/setup';
-import { Wrapper, siteVars } from '../../styles/globalStyles';
-import FlexedHeader, { HeaderTitle, HeaderImg, FlexedDiv, FlexedUl } from './FlexedHeader';
+import { Wrapper, siteVars as S } from '../../styles/globalStyles';
+import FlexedHeader, { 
+  HeaderTitle, 
+  HeaderImg, 
+  FlexedDiv, 
+  FlexedUl 
+} from './FlexedHeader';
 
 const Header = ({ headerPosition, colorA, colorB }) => {
 
@@ -15,7 +20,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
 
   const listenScrollEvent = e => {
     if (window.scrollY > 0) {
-      setShadow(`${siteVars.boxShadow}`);
+      setShadow(`${S.boxShadow}`);
       setOpacity(0.88);
       setColor(colorB);
     } else {
@@ -49,12 +54,12 @@ const Header = ({ headerPosition, colorA, colorB }) => {
           box-shadow: ${shadow};
           background-color: rgba(250, 250, 250, ${opacity});
           backdrop-filter: ${ opacity ? 'saturate(180%) blur(24px)' : null };
-          border-bottom: ${ opacity ? '1px solid #ededed' : null };
+          border-bottom: ${ opacity ? S.border : null };
           a {
             color: ${color};
           }
           a:hover {
-            color: ${siteVars.mainHighlight};
+            color: ${S.mainHighlight};
           }
         `}
       >
@@ -88,16 +93,16 @@ const Header = ({ headerPosition, colorA, colorB }) => {
                     padding: 0.4rem 0.6rem;
                     margin-top: 1rem;
                     border-radius: 5px;
-                    background-color: ${siteVars.mainHighlight};
-                    color: ${siteVars.offWhite} !important;
-                    border: 1px solid ${siteVars.mainHighlight};
+                    background-color: ${S.mainHighlight};
+                    color: ${S.offWhite} !important;
+                    border: 1px solid ${S.mainHighlight};
                     opacity: 0.86;
                     transition: all 0.2s;
                     &:hover,
                     &:focus {
-                      background-color: ${siteVars.offWhite};
-                      border: 1px solid ${siteVars.mainHighlight};
-                      color: ${siteVars.mainHighlight} !important;
+                      background-color: ${S.offWhite};
+                      border: 1px solid ${S.mainHighlight};
+                      color: ${S.mainHighlight} !important;
                     }
                     &:hover::after {
                       opacity: 0;
