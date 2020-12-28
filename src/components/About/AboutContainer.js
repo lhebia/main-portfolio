@@ -1,15 +1,5 @@
 import styled from '@emotion/styled';
 
-export const AboutContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  p {
-    
-  }
-`;
-
 export const AboutArticle = styled.article`
   text-align: center;
   width: 50%;

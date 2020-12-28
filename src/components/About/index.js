@@ -1,7 +1,12 @@
 import React from 'react';
+import { css } from '@emotion/core';
 import { graphql, useStaticQuery } from 'gatsby';
-import { AboutContainer, AboutArticle, AboutH3, AboutP } from './AboutContainer';
+import { 
+  AboutArticle, 
+  AboutH3, 
+  AboutP } from './AboutContainer';
 import SocialNav from '../SocialNav';
+import { PageSection } from '../../styles/globalStyles';
 
 export default function About() {
 
@@ -20,12 +25,17 @@ export default function About() {
     `);
 
     return (
-      <AboutContainer>
+      <PageSection css={css`
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      `}>
         <AboutArticle>
           <AboutH3>{data.site.siteMetadata.hero.title}</AboutH3>
           <AboutP>{data.site.siteMetadata.hero.desc}</AboutP>
           <SocialNav flexJustification="center"/>
         </AboutArticle>
-      </AboutContainer>
+      </PageSection>
     )
 }

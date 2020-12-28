@@ -131,7 +131,7 @@ export const TechStack = styled.p`
 `;
 
 export const SplashSection = styled.section`
-  min-height: 86vh;
+  min-height: 100vh;
   background-color: ${siteVars.lightGrey};
   background-position: center;
   background-size: cover;
