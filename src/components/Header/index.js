@@ -82,10 +82,24 @@ const Header = ({ headerPosition, colorA, colorB }) => {
           <nav>
             <FlexedUl>
               <li>
-                <Link to="/">Portfolio</Link>
+                <Link 
+                  to="/"
+                  activeStyle={{
+                    color: S.mainHighlight,
+                  }}
+                >
+                  Portfolio
+                </Link>
               </li>
               <li>
-                <Link to="/blog">Blog</Link>
+                <Link 
+                  to="/blog"
+                  activeStyle={{
+                    color: S.mainHighlight,
+                  }}
+                >
+                  Blog
+                </Link>
               </li>
               <li>
                 <a
