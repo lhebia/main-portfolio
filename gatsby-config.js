@@ -8,7 +8,7 @@ module.exports = {
       title: "Hi 👋, I'm Lawrence",
       subTitle: "Front-End Web Developer",
       desc:
-        "A constantly iterating, front-end web developer with experience building applications in React, JavaScript, Express, JQuery, HTML5, CSS3. I'm currently looking for an organization whose purpose I support and who can help me flourish as someone trying to do what they love, everyday.",
+        "A constantly iterating, front-end web developer with experience building applications in React, JavaScript, TypeScript, HTML5, CSS3. With over 10+ years in IT Technical Support, I've pivoted back into web development where I'm looking to get my feet set in the industry I have dreamed of working in my entire life. I love solving problems and constructing a UI that is beautiful and easy to understand.",
     },
     projects: [
       {
