@@ -18,6 +18,11 @@ const Header = ({ headerPosition, colorA, colorB }) => {
   const [opacity, setOpacity] = useState(0);
   const [color, setColor] = useState(colorA);
 
+  const activeStyle = {
+    color: S.mainHighlight,
+    opacity: 0.6,
+  };
+
   const listenScrollEvent = e => {
     if (window.scrollY > 0) {
       setShadow(`${S.boxShadow}`);
@@ -84,9 +89,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
               <li>
                 <Link 
                   to="/"
-                  activeStyle={{
-                    color: S.mainHighlight,
-                  }}
+                  activeStyle={activeStyle}
                 >
                   Portfolio
                 </Link>
@@ -94,9 +97,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
               <li>
                 <Link 
                   to="/blog"
-                  activeStyle={{
-                    color: S.mainHighlight,
-                  }}
+                  activeStyle={activeStyle}
                 >
                   Blog
                 </Link>
