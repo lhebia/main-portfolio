@@ -43,99 +43,99 @@ const Header = ({ headerPosition, colorA, colorB }) => {
     }
   })
 
-    const data = useStaticQuery(graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
         }
       }
-    `)
+    }
+  `)
 
-    return (
-      <FlexedHeader
+  return (
+    <FlexedHeader
+      css={css`
+        position: ${headerPosition};
+        box-shadow: ${shadow};
+        background-color: rgba(250, 250, 250, ${opacity});
+        backdrop-filter: ${ opacity ? 'saturate(180%) blur(24px)' : null };
+        border-bottom: ${ opacity ? S.border : null };
+        a {
+          color: ${color};
+        }
+        a:hover {
+          color: ${S.mainHighlight};
+        }
+      `}
+    >
+      <Global styles={setup} />
+      <Wrapper
         css={css`
-          position: ${headerPosition};
-          box-shadow: ${shadow};
-          background-color: rgba(250, 250, 250, ${opacity});
-          backdrop-filter: ${ opacity ? 'saturate(180%) blur(24px)' : null };
-          border-bottom: ${ opacity ? S.border : null };
-          a {
-            color: ${color};
-          }
-          a:hover {
-            color: ${S.mainHighlight};
-          }
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         `}
       >
-        <Global styles={setup} />
-        <Wrapper
-          css={css`
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          `}
-        >
-          <FlexedDiv>
-            <Link to="/">
-              <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
-            </Link>
-            <Link to="/">
-              <HeaderTitle>{data.site.siteMetadata.title}</HeaderTitle>
-            </Link>
-          </FlexedDiv>
-          <nav>
-            <FlexedUl>
-              <li>
-                <Link 
-                  to="/"
-                  activeStyle={activeStyle}
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/blog"
-                  activeStyle={activeStyle}
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <a
-                  css={css`
-                    padding: 0.4rem 0.6rem;
-                    margin-top: 1rem;
-                    border-radius: 5px;
-                    background-color: ${S.mainHighlight};
-                    color: ${S.offWhite} !important;
+        <FlexedDiv>
+          <Link to="/">
+            <HeaderImg src={dp36} alt="Logo for LawrenceHebia.com" />
+          </Link>
+          <Link to="/">
+            <HeaderTitle>{data.site.siteMetadata.title}</HeaderTitle>
+          </Link>
+        </FlexedDiv>
+        <nav>
+          <FlexedUl>
+            <li>
+              <Link 
+                to="/"
+                activeStyle={activeStyle}
+              >
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/blog"
+                activeStyle={activeStyle}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <a
+                css={css`
+                  padding: 0.4rem 0.6rem;
+                  margin-top: 1rem;
+                  border-radius: 5px;
+                  background-color: ${S.mainHighlight};
+                  color: ${S.offWhite} !important;
+                  border: 1px solid ${S.mainHighlight};
+                  opacity: 0.86;
+                  transition: all 0.2s;
+                  &:hover,
+                  &:focus {
+                    background-color: ${S.offWhite};
                     border: 1px solid ${S.mainHighlight};
-                    opacity: 0.86;
-                    transition: all 0.2s;
-                    &:hover,
-                    &:focus {
-                      background-color: ${S.offWhite};
-                      border: 1px solid ${S.mainHighlight};
-                      color: ${S.mainHighlight} !important;
-                    }
-                    &:hover::after {
-                      opacity: 0;
-                    }
-                  `}
-                  href="mailto:lawrencehebia@gmail.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Contact
-                </a>
-              </li>
-            </FlexedUl>
-          </nav>
-        </Wrapper>
-      </FlexedHeader>
-    )
+                    color: ${S.mainHighlight} !important;
+                  }
+                  &:hover::after {
+                    opacity: 0;
+                  }
+                `}
+                href="mailto:lawrencehebia@gmail.com"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Contact
+              </a>
+            </li>
+          </FlexedUl>
+        </nav>
+      </Wrapper>
+    </FlexedHeader>
+  )
 }
 
 export default Header;
