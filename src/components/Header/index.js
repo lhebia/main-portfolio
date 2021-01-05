@@ -5,12 +5,13 @@ import { Global, css } from '@emotion/core';
 import dp36 from '../../assets/dp36.png';
 import setup from '../../styles/setup';
 import { Wrapper, siteVars as S } from '../../styles/globalStyles';
-import FlexedHeader, { 
+import {
+  FlexedHeader,
   HeaderTitle, 
   HeaderImg, 
   FlexedDiv, 
   FlexedUl 
-} from './FlexedHeader';
+} from './styles';
 
 const Header = ({ headerPosition, colorA, colorB }) => {
 

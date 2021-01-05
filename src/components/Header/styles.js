@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { siteVars as S } from '../../styles/globalStyles';
 
-const FlexedHeader = styled.header`
+export const FlexedHeader = styled.header`
   padding: 1.2rem 0;
   width: 100%;
   top: 0;
@@ -50,5 +50,3 @@ export const FlexedUl = styled.ul`
     }
   }
 `;
-
-export default FlexedHeader;
