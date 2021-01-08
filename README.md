@@ -5,12 +5,20 @@
 An updated version of [lawrencehebia.com](https://lawrencehebia.com), my portfolio website. I'm very proud of the work I did on this project as it now uses a modern front-end stack and is something I feel I can slowly iterate on going forward. 
 This site now uses React, Gatsby, Emotion(CSS-in-JS), GraphQL and Contentful CMS for the blog.
 
+## Requirements
+`.env` file with:
+- CONTENTFUL_SPACE_ID
+- CONTENTFUL_ACCESS_TOKEN
+
 ## Available Scripts
 
-In the project directory, you can run:
+To setup:
 
+Clone to local:
+### `git clone`
+
+Install dependencies:
+### `npm install`
+
+Start dev server:
 ### `npm run develop`
-
-### `npm test`
-
-### `npm run build`
