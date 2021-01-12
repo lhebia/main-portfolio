@@ -20,11 +20,11 @@ Technologies used:
 
 To setup:
 
-Clone to local:
+1. Clone to local
 ### `git clone`
 
-Install dependencies:
+2. Install dependencies
 ### `npm install`
 
-Start dev server:
+3. Start dev server
 ### `npm run develop`
