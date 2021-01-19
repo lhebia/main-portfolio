@@ -8,7 +8,7 @@ import Skills from '../components/Skills';
 import ContactForm from '../components/ContactForm';
 import HeroSplash from '../components/HeroSplash';
 
-export default function Home() {
+export default function Home(){
   return (
     <Layout headerPosition="fixed" colorA="#ffffff" colorB="#000000" >
       <Head title="Portfolio" />

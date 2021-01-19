@@ -13,18 +13,20 @@ import {
   FlexedUl 
 } from './styles';
 
-const Header = ({ headerPosition, colorA, colorB }) => {
+import { HeaderProps } from './types';
+
+const Header = ({ headerPosition, colorA, colorB }: HeaderProps ) => {
 
   const [shadow, setShadow] = useState(`none`);
   const [opacity, setOpacity] = useState(0);
   const [color, setColor] = useState(colorA);
 
-  const activeStyle = {
+  const activeStyle: any = {
     color: S.mainHighlight,
     opacity: 0.6,
   };
 
-  const listenScrollEvent = e => {
+  const listenScrollEvent = (): void => {
     if (window.scrollY > 0) {
       setShadow(`${S.boxShadow}`);
       setOpacity(0.88);
@@ -43,7 +45,7 @@ const Header = ({ headerPosition, colorA, colorB }) => {
     }
   })
 
-  const data = useStaticQuery(graphql`
+  const data: object = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {

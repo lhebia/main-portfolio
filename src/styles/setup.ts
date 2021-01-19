@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
-import { siteVars } from '../styles/globalStyles';
+import { siteVars } from './globalStyles';
 
-const setup = css`
+const setup: object = css`
   a,
   abbr,
   acronym,
@@ -324,4 +324,3 @@ const setup = css`
 `
 
 export default setup;
-
