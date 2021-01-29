@@ -13,15 +13,22 @@ import {
   FlexedUl 
 } from './styles';
 
-const Header = ({ headerPosition, colorA, colorB }) => {
+const Header = ({ 
+
+  headerPosition, 
+  colorA, 
+  colorB 
+
+}) => {
 
   const [shadow, setShadow] = useState(`none`);
   const [opacity, setOpacity] = useState(0);
   const [color, setColor] = useState(colorA);
 
   const activeStyle = {
-    color: S.mainHighlight,
     opacity: 0.6,
+    fontWeight: 'bold',
+    pointerEvents: 'none',
   };
 
   const listenScrollEvent = e => {

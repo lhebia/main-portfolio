@@ -8,6 +8,7 @@ const SocialNav = ({ flexJustification }) => {
   const FooterUl = styled.ul`
       display: flex;
       justify-content: ${flexJustification};
+      padding: 0.5rem;
       li {
           padding: 0.75rem;
           font-size: 1.5rem;
