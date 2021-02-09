@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled, { StyledComponent } from '@emotion/styled';
 import { siteVars as S } from '../../styles/globalStyles';
 
 export const FlexedHeader = styled.header`

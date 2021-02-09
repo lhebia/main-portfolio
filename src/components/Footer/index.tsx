@@ -5,7 +5,7 @@ import SocialNav from '../SocialNav';
 import { Wrapper  } from '../../styles/globalStyles';
 import { StyledFooter, FooterP } from './footerStyles';
 
-const Footer = () => {
+const Footer: React.FC<any> = () => {
     return (
       <StyledFooter>
         <Wrapper
@@ -20,8 +20,13 @@ const Footer = () => {
         >
           <SocialNav flexJustification="flex-start"/>
           <FooterP>
-            Handcrafted with <a href="https://gatsbyjs.com" target="_blank"
-                rel="noopener noreferrer"> Gatsby </a> in {new Date().getFullYear()}.
+            Handcrafted by me with{' '}
+              <a 
+                href="https://gatsbyjs.com" target="_blank"
+                rel="noopener noreferrer"> 
+                Gatsby 
+              </a> 
+            {' '}in { new Date().getFullYear() } &copy;
           </FooterP>
         </Wrapper>
       </StyledFooter>
