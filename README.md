@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/214b7e53-b32c-4c78-8617-d755ff2e91a0/deploy-status)](https://app.netlify.com/sites/lhebiaportfolio/deploys)
 
+Staging URL: https://lhebia-staging.netlify.app/
+
 An updated version of [lawrencehebia.com](https://lawrencehebia.com), my portfolio website. I'm very proud of the work I did on this project as it now uses a modern front-end stack and is something I feel I can slowly iterate on going forward. 
 Technologies used:
 - Gatsby
