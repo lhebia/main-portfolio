@@ -1,0 +1,3 @@
+interface SocialNavProps {
+    flexJustification: string
+}
