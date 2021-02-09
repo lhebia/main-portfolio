@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { css } from '@emotion/core';
 import { graphql, useStaticQuery } from 'gatsby';
 import { 
   AboutArticle, 
   AboutH3, 
-  AboutP } from './AboutContainer';
+  AboutP } from './styles';
 import SocialNav from '../SocialNav';
 import { PageSection } from '../../styles/globalStyles';
 
-export default function About() {
+const About: FunctionComponent<any> = () => {
 
     const data = useStaticQuery(graphql`
       query {
@@ -39,3 +39,5 @@ export default function About() {
       </PageSection>
     )
 }
+
+export default About;

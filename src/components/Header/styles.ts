@@ -13,6 +13,7 @@ export const FlexedHeader = styled.header`
 export const HeaderTitle = styled.p`
   text-transform: lowercase;
   font-size: 1.5rem;
+  font-weight: 100;
   @media (max-width: 650px) {
     font-size: 0;
   }

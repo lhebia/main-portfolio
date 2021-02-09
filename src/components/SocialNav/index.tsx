@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-const SocialNav = ({ flexJustification }) => {
+import { SocialNavProps } from './types';
+
+const SocialNav: FunctionComponent<SocialNavProps> = ({ 
+  
+  flexJustification 
+
+}) => {
+
   const FooterUl = styled.ul`
       display: flex;
       justify-content: ${flexJustification};
+      padding: 0.5rem;
       li {
           padding: 0.75rem;
           font-size: 1.5rem;

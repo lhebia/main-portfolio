@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import { siteVars } from './globalStyles';
 
-const setup: object = css`
+const setup: any = css`
   a,
   abbr,
   acronym,

@@ -2,13 +2,13 @@ import React, { useReducer } from 'react';
 import { css } from '@emotion/core';
 
 import { Wrapper, SectionHeader, PageSection, siteVars, SectionSubHeader } from '../../styles/globalStyles';
-import { PortfolioForm } from './PortfolioForm';
+import { PortfolioForm } from './styles';
 
 
-const ContactForm = () => {
+const ContactForm: React.FC<any> = () => {
 
   const [loginInput, setLoginInput] = useReducer(
-    (state, newState) => ({ ...state, ...newState }),
+    (state: any, newState: any) => ({ ...state, ...newState }),
     {
       namePlaceholder: "Name *",
       name: "",
@@ -19,7 +19,7 @@ const ContactForm = () => {
     }
   )
 
-  const handleLoginInput = event => {
+  const handleLoginInput = (event:any) => {
     const name = event.target.name
     const value = event.target.value
     setLoginInput({ [name]: value })

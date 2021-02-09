@@ -25,6 +25,7 @@ export const AboutP = styled.p`
   font-size: 1.2rem;
   line-height: 1.8rem;
   padding: 0.5rem;
+  letter-spacing: 0.04rem;
   @media (max-width: 500px) {
     padding: 0.2rem;
     font-size: 1rem;

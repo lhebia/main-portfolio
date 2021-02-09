@@ -15,15 +15,22 @@ import {
 
 import { HeaderProps } from './types';
 
-const Header = ({ headerPosition, colorA, colorB }: HeaderProps ) => {
+const Header = ({ 
+
+  headerPosition, 
+  colorA, 
+  colorB 
+
+}: HeaderProps) => {
 
   const [shadow, setShadow] = useState(`none`);
   const [opacity, setOpacity] = useState(0);
   const [color, setColor] = useState(colorA);
 
-  const activeStyle: any = {
-    color: S.mainHighlight,
+  const activeStyle = {
     opacity: 0.6,
+    fontWeight: 'bold',
+    pointerEvents: 'none',
   };
 
   const listenScrollEvent = (): void => {

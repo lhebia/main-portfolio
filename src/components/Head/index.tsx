@@ -2,7 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Head = ({ title }) => {
+export interface HeadProps {
+    title: string,
+}
+
+const Head = ({ title }: HeadProps) => {
+    
     const data = useStaticQuery(graphql`
         query {
             site {
@@ -12,6 +17,9 @@ const Head = ({ title }) => {
             }
         }
     `)
+
+    console.log('2 CORINTHIANS 12:9');
+
     return (
         <Helmet title={`${title} | ${data.site.siteMetadata.headTitle}`} />
     )
