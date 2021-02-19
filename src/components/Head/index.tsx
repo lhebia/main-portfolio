@@ -6,7 +6,7 @@ export interface HeadProps {
     title: string,
 }
 
-const Head = ({ title }: HeadProps) => {
+const Head: React.FC<HeadProps> = ({ title }) => {
     
     const data = useStaticQuery(graphql`
         query {
@@ -21,7 +21,9 @@ const Head = ({ title }: HeadProps) => {
     console.log('2 CORINTHIANS 12:9');
 
     return (
-        <Helmet title={`${title} | ${data.site.siteMetadata.headTitle}`} />
+        <Helmet 
+            title={`${title} | ${data.site.siteMetadata.headTitle}`} 
+        />
     )
 }
 
