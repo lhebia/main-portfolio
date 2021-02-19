@@ -10,34 +10,37 @@ import { PageSection } from '../../styles/globalStyles';
 
 const About: FunctionComponent<any> = () => {
 
-    const data = useStaticQuery(graphql`
-      query {
-        site {
-          siteMetadata {
-            hero {
-              title
-              subTitle
-              desc
-            }
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          hero {
+            title
+            subTitle
+            desc
           }
         }
       }
-    `);
+    }
+  `);
 
-    return (
-      <PageSection css={css`
+  return (
+    <PageSection 
+      id="main"
+      css={css`
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      `}>
-        <AboutArticle>
-          <AboutH3>{data.site.siteMetadata.hero.title}</AboutH3>
-          <AboutP>{data.site.siteMetadata.hero.desc}</AboutP>
-          <SocialNav flexJustification="center"/>
-        </AboutArticle>
-      </PageSection>
-    )
+      `}
+    >
+      <AboutArticle>
+        <AboutH3>{data.site.siteMetadata.hero.title}</AboutH3>
+        <AboutP>{data.site.siteMetadata.hero.desc}</AboutP>
+        <SocialNav flexJustification="center"/>
+      </AboutArticle>
+    </PageSection>
+  )
 }
 
 export default About;

@@ -107,6 +107,8 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-smoothscroll",
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
