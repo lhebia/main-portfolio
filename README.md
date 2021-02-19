@@ -11,6 +11,7 @@ Technologies used:
 - React
 - TypeScript
 - Emotion(CSS-in-JS)
+- SCSS
 - GraphQL
 - Contentful CMS
 
