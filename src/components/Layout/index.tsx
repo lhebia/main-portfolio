@@ -10,15 +10,21 @@ interface LayoutProps {
 	colorB: string,
 }
 
-const Layout = ({ children, headerPosition, colorA, colorB }: LayoutProps ) => {
+const Layout: React.FC<LayoutProps> = ({ 
+	children, 
+	headerPosition, 
+	colorA, 
+	colorB 
+}) => {
+	
 	return (
-		<React.Fragment>
+		<>
 			<Header headerPosition={headerPosition} colorA={colorA} colorB={colorB} />
 			<div>
 				{children}
 			</div>
 			<Footer />
-		</React.Fragment>
+		</>
 	)
 }
 

@@ -78,11 +78,17 @@ const Blog: React.FC<any> = () => {
       <Head title="Blog" />
       <HeroSplash pageType="blog" />
       <Wrapper>
-        <PageSection>
-          <SectionHeader css={css`
-            font-size: 4rem;
-            line-height: 4.6rem;
-          `}>Blog</SectionHeader>
+        <PageSection
+          id="main"
+        >
+          <SectionHeader 
+            css={css`
+              font-size: 4rem;
+              line-height: 4.6rem;
+            `}
+          >
+            Blog
+          </SectionHeader>
           <p css={css`
             font-size: 1.5rem;
             line-height: 2.1rem;

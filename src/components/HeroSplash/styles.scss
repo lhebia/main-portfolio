@@ -1,0 +1,30 @@
+// Hero Splash styles
+.hero--splash {
+
+	.button {
+		width: 100px;
+		height: 50px;
+		border-radius: 100px;
+		margin: 0 auto;
+		display: grid;
+		place-items: center;
+		border: none;
+		opacity: 0.86;
+		color: #145c9e;
+		background-color: #fff;
+		font-size: 0.86rem;
+
+		&:hover {
+			transform: scale(1.06);
+			transition: .55s ease;
+			opacity: 0.6;
+		}
+
+		&-container {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 50px;
+		}
+	}
+}
