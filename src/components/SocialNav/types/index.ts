@@ -1,3 +1,3 @@
-interface SocialNavProps {
+export interface SocialNavProps {
     flexJustification: string
 }
