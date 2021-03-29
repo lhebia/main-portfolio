@@ -15,12 +15,12 @@ Technologies used:
 - GraphQL
 - Contentful CMS
 
-## Requirements
+## 📝 Requirements
 `.env` file with:
 - CONTENTFUL_SPACE_ID
 - CONTENTFUL_ACCESS_TOKEN
 
-## Available Scripts
+## ⚙️ Available Scripts
 
 To setup:
 
