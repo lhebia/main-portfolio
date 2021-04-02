@@ -21,11 +21,6 @@ const Footer: React.FC<any> = () => {
           <SocialNav flexJustification="flex-start"/>
           <FooterP>
             Made in Canada <span role="img" aria-label="Maple Leaf">🍁</span>
-              {/* <a 
-                href="https://gatsbyjs.com" target="_blank"
-                rel="noopener noreferrer"> 
-                Gatsby 
-              </a>  */}
             {' '}&copy; { new Date().getFullYear() }
           </FooterP>
         </Wrapper>
