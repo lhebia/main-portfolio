@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import { css } from '@emotion/core';
 
-import { Wrapper, SectionHeader, PageSection, siteVars, SectionSubHeader } from '../../styles/globalStyles';
+import { SectionHeader, PageSection, siteVars, SectionSubHeader } from '../../styles/globalStyles';
 import { PortfolioForm } from './styles';
 
 
@@ -26,7 +26,7 @@ const ContactForm: React.FC<any> = () => {
   }
 
     return (
-      <Wrapper>
+      <div className="wrapper">
         <PageSection
           id="Contact"
           css={css`
@@ -87,7 +87,7 @@ const ContactForm: React.FC<any> = () => {
             />
           </PortfolioForm>
         </PageSection>
-      </Wrapper>
+      </div>
     )
 }
 
