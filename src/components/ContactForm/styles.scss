@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 25vh;
+}
+
+.portfolio-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+
+  input,
+  textarea {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid $main-text;
+    font-family: -apple-system, "Roboto", sans-serif;
+  }
+
+  @media (max-width:768px) {
+    width: 100%;
+  }
+}
+
+.portfolio-input {
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  background-color: $main-highlight;
+  color: $off-white;
+  border: 1px solid $main-highlight;
+  opacity: 0.86;
+  transition: all 0.2s;
+  &:hover,
+  &:focus {
+    background-color: $off-white;
+    border: 1px solid $main-highlight;
+    color: $main-highlight;
+  }
+}
