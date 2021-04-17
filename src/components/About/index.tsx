@@ -1,12 +1,10 @@
 import React, { FunctionComponent } from 'react';
-import { css } from '@emotion/core';
+
 import { graphql, useStaticQuery } from 'gatsby';
-import { 
-  AboutArticle, 
-  AboutH3, 
-  AboutP } from './styles';
+
 import SocialNav from '../SocialNav';
-import { PageSection } from '../../styles/globalStyles';
+
+import "./styles.scss";
 
 const About: FunctionComponent<any> = () => {
 
@@ -25,21 +23,13 @@ const About: FunctionComponent<any> = () => {
   `);
 
   return (
-    <PageSection 
-      id="main"
-      css={css`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      `}
-    >
-      <AboutArticle>
-        <AboutH3>{data.site.siteMetadata.hero.title}</AboutH3>
-        <AboutP>{data.site.siteMetadata.hero.desc}</AboutP>
+    <section className="page-section about-section" id="main">
+      <article className="about-article">
+        <h3 className="about-heading">{data.site.siteMetadata.hero.title}</h3>
+        <p className="about-text">{data.site.siteMetadata.hero.desc}</p>
         <SocialNav flexJustification="center"/>
-      </AboutArticle>
-    </PageSection>
+      </article>
+    </section>
   )
 }
 

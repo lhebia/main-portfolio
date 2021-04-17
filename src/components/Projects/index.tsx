@@ -2,8 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { css } from '@emotion/core';
 
-import { TextCard, ProjectTitle, ProjectLink, ProjectUl } from './styles';
-import { Wrapper, PageSection, SectionHeader, SectionSubHeader, TechStack } from '../../styles/globalStyles';
+import "./styles.scss";
 
 const Projects: React.FC<any> = () => {
 
@@ -28,11 +27,11 @@ const Projects: React.FC<any> = () => {
 	const projectList = data.site.siteMetadata.projects;
 
 	return (
-		<Wrapper>
-			<PageSection>
-				<SectionHeader>Projects</SectionHeader>
-				<SectionSubHeader>A few of the things I've been working on.</SectionSubHeader>
-				<ProjectUl>
+		<div className="wrapper">
+			<section className="page-section">
+				<h4 className="section-header">Projects</h4>
+				<p className="section-sub-header">A few of the things I've been working on.</p>
+				<ul className="project-ul">
 					{
 						projectList.map(( project: any ) => {
 							const stack = project.tech.join(' | ');
@@ -52,24 +51,31 @@ const Projects: React.FC<any> = () => {
 												<img src={project.imgName} alt={project.desc} />
 											</a>
 										</div>
-										<TextCard>
-											<ProjectTitle>
-												<ProjectLink href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+										<div className="text-card">
+											<p className="project-title">
+												<a className="project-link" href={project.liveUrl} target="_blank" rel="noopener noreferrer">
 												{project.title}
-												</ProjectLink>
-											</ProjectTitle>
-											<TechStack>{ stack }</TechStack>
+												</a>
+											</p>
+											<p className="tech-stack">{ stack }</p>
 											<p>{project.desc}</p>
-											<p><ProjectLink href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live</ProjectLink> | <ProjectLink href={project.githubUrl} target="_blank" rel="noopener noreferrer">Github</ProjectLink></p>
-										</TextCard>
+											<p>
+												<a href={project.liveUrl} className="project-link" target="_blank" rel="noopener noreferrer">
+													Live
+												</a> | 
+												<a href={project.githubUrl} className="project-link" target="_blank" rel="noopener noreferrer">
+													{' '}Github
+												</a>
+											</p>
+										</div>
 									</article>
 								</li>
 							)
 						})
 					}
-					</ProjectUl>
-			</PageSection>
-		</Wrapper>
+					</ul>
+			</section>
+		</div>
 	)
 }
 

@@ -74,7 +74,7 @@ const Blog: React.FC<any> = () => {
   const posts = data.allContentfulBlogPost.edges;
 
   return (
-    <Layout headerPosition="fixed" colorA="#ffffff" colorB="#000000">
+    <Layout>
       <Head title="Blog" />
       <HeroSplash pageType="blog" />
       <Wrapper>
@@ -98,28 +98,27 @@ const Blog: React.FC<any> = () => {
           <BlogUl>
             {
               posts.map(post => {
-                  return (
-                    <BlogLi key={post.node.slug}>
-                      <Link
-                        to={`/blog/${post.node.slug}`}
-                        key={post.node.slug}
-                      >
-                        <BlogTitle>{post.node.title}</BlogTitle>
-                      </Link>
-                      <TitleDate>
-                        {post.node.publishedDate}
-                      </TitleDate>
-                      <BlogDescription>{post.node.description}</BlogDescription>
-                      <Link
-                        to={`/blog/${post.node.slug}`}
-                        key={post.node.slug}
-                      >
-                        <p>Read post</p>
-                      </Link>
-                    </BlogLi>
-                  )
-                })
-              }
+                return (
+                  <BlogLi key={post.node.slug}>
+                    <Link
+                      to={`/blog/${post.node.slug}`}
+                    >
+                      <BlogTitle>{post.node.title}</BlogTitle>
+                    </Link>
+                    <TitleDate>
+                      {post.node.publishedDate}
+                    </TitleDate>
+                    <BlogDescription>{post.node.description}</BlogDescription>
+                    <Link
+                      to={`/blog/${post.node.slug}`}
+                      key={post.node.slug}
+                    >
+                      <p>Read post</p>
+                    </Link>
+                  </BlogLi>
+                )
+              })
+            }
           </BlogUl>
           <a 
             href='https://www.contentful.com/' 

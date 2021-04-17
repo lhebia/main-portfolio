@@ -3,23 +3,19 @@ import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 
+import "../../styles/main.scss";
+
 interface LayoutProps {
 	children: any,
-	headerPosition: string,
-	colorA: string,
-	colorB: string,
 }
 
 const Layout: React.FC<LayoutProps> = ({ 
 	children, 
-	headerPosition, 
-	colorA, 
-	colorB 
 }) => {
 	
 	return (
 		<>
-			<Header headerPosition={headerPosition} colorA={colorA} colorB={colorB} />
+			<Header />
 			<div>
 				{children}
 			</div>

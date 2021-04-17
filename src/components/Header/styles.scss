@@ -1,0 +1,109 @@
+@import "../../styles/variables.scss";
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexed-header {
+  position: fixed;
+  padding: 1.2rem 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: $off-white;
+  transition: .2s ease;
+
+  a:hover {
+    color: $main-highlight;
+  }
+  background-color: rgba(250, 250, 250, 0);
+  backdrop-filter: none;
+  border-bottom: none;
+
+  a {
+    color: $off-white;
+  }
+}
+
+.active {
+  box-shadow: $box-shadow;
+  background-color: rgba(250, 250, 250, 0.88);
+  backdrop-filter: saturate(180%) blur(24px);
+  border-bottom: $main-border;
+  
+  a {
+    color: $main-text;
+  }
+}
+
+.header-logo-img {
+  padding-right: 1rem;
+  padding-bottom: 0.2rem;
+  transition: all .2s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.header-title {
+  text-transform: lowercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  @media (max-width: 650px) {
+    font-size: 0;
+  }
+}
+
+.header-top-list {
+  display: flex;
+  list-style-type: none;
+  font-size: 1.2rem;
+  align-items: center;
+
+  li {
+    padding: 0 0.5rem;
+    position: relative;
+  }
+
+  a:nth-of-type(3):hover::after {
+    opacity: 0;
+  }
+
+  @media (max-width: 450px) {
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.contact-link {
+  padding: 0.4rem 0.6rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  background-color: $main-highlight;
+  color: $off-white !important;
+  border: 1px solid $main-highlight;
+  opacity: 0.86;
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: $off-white;
+    border: 1px solid $main-highlight;
+    color: $main-highlight !important;
+  }
+
+  &:hover::after {
+    opacity: 0;
+  }
+}
+
+.active-class {
+  opacity: 0.6;
+  font-weight: bold;
+  pointer-events: none;
+}
