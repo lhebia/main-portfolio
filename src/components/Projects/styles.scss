@@ -1,0 +1,79 @@
+@import "../../styles/main.scss";
+@import "../../styles/variables.scss";
+
+.project-ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 1068px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    // padding: 0 0 1rem 0;
+    text-align: left;
+    box-shadow: $box-shadow;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  img {
+    border-radius: 5px 5px 0px 0px;
+    transition: all 0.6s;
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      opacity: 0.46;
+    }
+  }
+
+  p {
+    line-height: 1.4rem;
+  }
+
+  p:last-of-type {
+    padding-top: 0.5rem;
+  }
+}
+
+.project-link {
+  font-weight: bold;
+  color: $main-highlight;
+
+  &:hover,
+  &:focus {
+    opacity: 0.4;
+  }
+}
+
+.text-card {
+  padding: 1rem;
+}
+
+.project-link {
+  font-weight: bold;
+  color: $main-highlight;
+  
+  &:hover,
+  &:focus {
+    opacity: 0.4;
+  }
+}
+
+.project-title {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.05rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding: 1rem 0;
+}

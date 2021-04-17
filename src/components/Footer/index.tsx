@@ -1,30 +1,20 @@
 import React from 'react';
-import { css } from '@emotion/core';
 
 import SocialNav from '../SocialNav';
-import { Wrapper  } from '../../styles/globalStyles';
-import { StyledFooter, FooterP } from './footerStyles';
+
+import "./styles.scss";
 
 const Footer: React.FC<any> = () => {
     return (
-      <StyledFooter>
-        <Wrapper
-          css={css`
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            @media (max-width: 550px) {
-              flex-direction: column;
-            }
-          `}
-        >
+      <footer className="footer-style">
+        <div className="wrapper footer-wrap">
           <SocialNav flexJustification="flex-start"/>
-          <FooterP>
+          <p className="footer-text">
             Made in Canada <span role="img" aria-label="Maple Leaf">🍁</span>
             {' '}&copy; { new Date().getFullYear() }
-          </FooterP>
-        </Wrapper>
-      </StyledFooter>
+          </p>
+        </div>
+      </footer>
     )
 }
 

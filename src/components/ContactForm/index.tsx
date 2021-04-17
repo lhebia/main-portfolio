@@ -1,9 +1,6 @@
 import React, { useReducer } from 'react';
-import { css } from '@emotion/core';
 
-import { SectionHeader, PageSection, siteVars, SectionSubHeader } from '../../styles/globalStyles';
-import { PortfolioForm } from './styles';
-
+import "./styles.scss";
 
 const ContactForm: React.FC<any> = () => {
 
@@ -27,19 +24,10 @@ const ContactForm: React.FC<any> = () => {
 
     return (
       <div className="wrapper">
-        <PageSection
-          id="Contact"
-          css={css`
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 25vh;
-          `}
-        >
-          <SectionHeader>Contact Me</SectionHeader>
-          <SectionSubHeader>Let's chat, feel free to drop a line to discuss a project or even to have a coffee.</SectionSubHeader>
-          <PortfolioForm action="https://formspree.io/f/xwkrrapw" method="POST">
+        <section className="page-section contact-section" id="Contact">
+          <h4 className="section-header">Contact Me</h4>
+          <p className="section-sub-header">Let's chat, feel free to drop a line to discuss a project or even to have a coffee.</p>
+          <form className="portfolio-form" action="https://formspree.io/f/xwkrrapw" method="POST">
             <input
               type="text"
               name="name"
@@ -68,25 +56,10 @@ const ContactForm: React.FC<any> = () => {
             <input
               type="submit"
               value="Submit"
-              css={css`
-                padding: 1rem 1.2rem;
-                margin-top: 1rem;
-                border-radius: 5px;
-                background-color: ${siteVars.mainHighlight};
-                color: ${siteVars.offWhite};
-                border: 1px solid ${siteVars.mainHighlight};
-                opacity: 0.86;
-                transition: all 0.2s;
-                &:hover,
-                &:focus {
-                  background-color: ${siteVars.offWhite};
-                  border: 1px solid ${siteVars.mainHighlight};
-                  color: ${siteVars.mainHighlight};
-                }
-              `}
+              className="portfolio-input"
             />
-          </PortfolioForm>
-        </PageSection>
+          </form>
+        </section>
       </div>
     )
 }
