@@ -28,8 +28,8 @@ module.exports = {
         desc:
           "A fully accessible memory matching game using unicode and JQuery.",
         shortDesc: "Test your memory with emojis.",
-        liveUrl: "https://lhebia.github.io/lawrenceHebiaProjectThree/",
-        githubUrl: "https://github.com/lhebia/lawrenceHebiaProjectThree",
+        liveUrl: "https://lhebia.github.io/noahs-ark-memory/",
+        githubUrl: "https://github.com/lhebia/noahs-ark-memory",
       },
       {
         title: "Password Generator",
