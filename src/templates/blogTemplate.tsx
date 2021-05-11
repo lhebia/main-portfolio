@@ -21,7 +21,6 @@ export const query = graphql`
 `;
 
 export default function blogTemplate(props) {
-  console.log(typeof(props))
   const options = {
     renderNode: {
       "embedded-asset-block": (node) => {
