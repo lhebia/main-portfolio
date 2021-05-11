@@ -21,6 +21,7 @@ export const query = graphql`
 `;
 
 export default function blogTemplate(props) {
+  console.log(typeof(props))
   const options = {
     renderNode: {
       "embedded-asset-block": (node) => {
@@ -32,7 +33,7 @@ export default function blogTemplate(props) {
   }
 
   return (
-    <Layout headerPosition="sticky" colorA="#000000" colorB="#000000">
+    <Layout light={true}>
       <Head title={props.data.contentfulBlogPost.title} />
       <Wrapper>
         <BlogPageSection>
