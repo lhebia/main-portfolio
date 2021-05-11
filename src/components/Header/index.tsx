@@ -5,15 +5,21 @@ import dp36 from '../../assets/dp36.png';
 
 import "./styles.scss";
 
-const Header = () => {
+interface HeaderProps {
+  light?: boolean,
+}
+
+const Header: React.FC<HeaderProps> = ({ light = false }) => {
 
   const [styleClass, setStyleClass] = useState('');
 
   const listenScrollEvent = (): void => {
-    if (window.scrollY > 0) {
-      setStyleClass(' active');
-    } else {
-      setStyleClass('');
+    if (!light) {
+      if (window.scrollY > 0) {
+        setStyleClass(' active');
+      } else {
+        setStyleClass('');
+      }
     }
   }
 
@@ -22,7 +28,13 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", listenScrollEvent)
     }
-  })
+  }, [])
+
+  useEffect(() => {
+    if (light) {
+      setStyleClass(' active');
+    }
+  }, [])
 
   const data = useStaticQuery(graphql`
     query {
