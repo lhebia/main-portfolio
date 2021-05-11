@@ -7,20 +7,22 @@ import "../../styles/main.scss";
 
 interface LayoutProps {
 	children: any,
+	light?: boolean
 }
 
 const Layout: React.FC<LayoutProps> = ({ 
 	children, 
+	light
 }) => {
 	
 	return (
 		<>
-			<Header />
+			<Header light={light}/>
 			<div>
 				{children}
 			</div>
 			<Footer />
-		</>
+		</> 
 	)
 }
 
