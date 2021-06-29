@@ -32,6 +32,10 @@
   text-align: center;
 }
 
+.tech-stack-font {
+  font-family: "Ubuntu", sans-serif;
+}
+
 .tech-stack {
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.6rem;
@@ -45,4 +49,8 @@
   &-align-center {
     align-items: center;
   }
+}
+
+.text-centered {
+  text-align: center;
 }
