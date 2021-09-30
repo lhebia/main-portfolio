@@ -4,36 +4,50 @@ import { css } from '@emotion/core';
 
 import "./styles.scss";
 
+interface Project {
+	title: string,
+	imgName: string,
+	tech: string[],
+	desc: string,
+	shortDesc: string,
+	liveUrl: string,
+	githubUrl: string,
+}
+
 const Projects: React.FC<any> = () => {
 
 	const data = useStaticQuery(graphql`
 		query {
 			site {
 				siteMetadata {
-					projects {
+					projectSection {
 						title
-						imgName
-						tech
-						desc
-						shortDesc
-						liveUrl
-						githubUrl
+						description
+						projects {
+							title
+							imgName
+							tech
+							desc
+							shortDesc
+							liveUrl
+							githubUrl
+						}
 					}
 				}
 			}
 		}
 	`);
 
-	const projectList = data.site.siteMetadata.projects;
+	const { title, description, projects } = data.site.siteMetadata.projectSection;
 
 	return (
 		<div className="wrapper">
 			<section className="page-section">
-				<h4 className="section-header">Projects</h4>
-				<p className="section-sub-header">A few of the things I've been working on.</p>
+				<h4 className="section-header">{ title }</h4>
+				<p className="section-sub-header">{ description }</p>
 				<ul className="project-ul">
 					{
-						projectList.map(( project: any ) => {
+						projects.map(( project: Project ) => {
 							const stack = project.tech.join(' | ');
 								
 							return (

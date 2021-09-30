@@ -7,9 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { SocialNavProps } from './types';
 
 const SocialNav: FunctionComponent<SocialNavProps> = ({ 
-  
   flexJustification 
-
 }) => {
 
   const FooterUl = styled.ul`

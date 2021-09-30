@@ -22,11 +22,13 @@ const About: FunctionComponent<any> = () => {
     }
   `);
 
+  const { title, desc } = data.site.siteMetadata.hero;
+
   return (
     <section className="page-section about-section" id="main">
       <article className="about-article">
-        <h3 className="about-heading">{data.site.siteMetadata.hero.title}</h3>
-        <p className="about-text">{data.site.siteMetadata.hero.desc}</p>
+        <h3 className="about-heading">{ title }</h3>
+        <p className="about-text">{ desc }</p>
         <SocialNav flexJustification="center"/>
       </article>
     </section>
