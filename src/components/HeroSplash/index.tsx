@@ -18,22 +18,25 @@ const HeroSplash: React.FC<HeroSplashProps> = ({ pageType }) => {
 	const [background, setBackground] = useState('');
 
 	useEffect(() => {
-			if (pageType === 'blog') {
-					setBackground(bloghandsmallA);
-			} else {
-					setBackground(lightskyblue);
-			}
+		if (pageType === 'blog') {
+			setBackground(bloghandsmallA);
+		} else {
+			setBackground(lightskyblue);
+		}
 	},[pageType])
 	
 	const data = useStaticQuery(graphql`
 		query {
-				site {
-						siteMetadata {
-								headTitle
-						}
+			site {
+				siteMetadata {
+					headTitle
+					headSubTitle
 				}
+			}
 		}
 	`)
+
+	const { headTitle, headSubTitle } = data.site.siteMetadata;
 
 	return (
 		<div className="hero--splash">
@@ -46,8 +49,8 @@ const HeroSplash: React.FC<HeroSplashProps> = ({ pageType }) => {
 						flex-direction: column;
 					`}
 				>
-					<SplashTitle>{data.site.siteMetadata.headTitle}</SplashTitle>
-					<SplashSubTitle>Front End Web Developer <span role="img" aria-label="Male Technologist">👨🏻‍💻</span></SplashSubTitle>
+					<SplashTitle>{ headTitle }</SplashTitle>
+					<SplashSubTitle>{ headSubTitle }</SplashSubTitle>
 					<div
 						className="button-container"
 					>

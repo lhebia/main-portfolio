@@ -15,27 +15,31 @@ const Skills: React.FC<any> = () => {
 		query {
 			site {
 				siteMetadata {
-					skills {
-						icon
-						skillName
+					skillsSection {
+						title
+						subTitle
+						skills {
+							icon
+							skillName
+						}
 					}
 				}
 			}
 		}
 	`);
 
-	const skills = data.site.siteMetadata.skills;
+	const { title, subTitle, skills } = data.site.siteMetadata.skillsSection;
 
 	return (
 		<Wrapper>
 			<PageSection>
-				<SectionHeader>Skills</SectionHeader>
-				<SectionSubHeader>The things I love to learn about and work on everyday.</SectionSubHeader>
+				<SectionHeader>{ title }</SectionHeader>
+				<SectionSubHeader>{ subTitle }</SectionSubHeader>
 				<SkillsUl>
 					{
 						skills.map(({ skillName }: Skills) => {
 							return (
-								<SkillsLi key={skillName}>
+								<SkillsLi key={"skl-" + skillName}>
 									<BsCode />
 									<TechStack>{skillName}</TechStack>
 								</SkillsLi>

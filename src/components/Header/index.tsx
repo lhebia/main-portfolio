@@ -41,20 +41,28 @@ const Header: React.FC<HeaderProps> = ({ light = false }) => {
       site {
         siteMetadata {
           title
+          topNavLinks {
+            blog
+            contact
+            portfolio
+          }
         }
       }
     }
-  `)
+  `);
+
+  const { title, topNavLinks } = data.site.siteMetadata;
+  const { blog, contact, portfolio } = topNavLinks;
 
   return (
-    <header className={"flexed-header" + styleClass}>
+    <header className={ "flexed-header" + styleClass }>
       <div className="wrapper header-wrap">
         <div className="flex flex-align-center">
           <Link to="/">
-            <img className="header-logo-img" src={dp36} alt="Logo for LawrenceHebia.com" />
+            <img className="header-logo-img" src={ dp36 } alt="Logo for LawrenceHebia.com" />
           </Link>
           <Link to="/">
-            <p className="header-title">{data.site.siteMetadata.title}</p>
+            <p className="header-title">{ title }</p>
           </Link>
         </div>
         <nav>
@@ -64,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({ light = false }) => {
                 to="/"
                 activeClassName="active-class"
               >
-                Portfolio
+                { portfolio }
               </Link>
             </li>
             <li>
@@ -72,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ light = false }) => {
                 to="/blog"
                 activeClassName="active-class"
               >
-                Blog
+                { blog }
               </Link>
             </li>
             <li>
@@ -82,7 +90,7 @@ const Header: React.FC<HeaderProps> = ({ light = false }) => {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Contact
+                { contact }
               </a>
             </li>
           </ul>
