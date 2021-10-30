@@ -1,12 +1,10 @@
-import React, { FunctionComponent } from 'react';
-
+import React, { ReactElement } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-
 import SocialNav from '../SocialNav';
-
 import "./styles.scss";
+import { AboutData } from '../../types/types';
 
-const About: FunctionComponent<any> = () => {
+const About: React.FC<React.FC> = (): ReactElement => {
 
   const data = useStaticQuery(graphql`
     query {
@@ -22,7 +20,7 @@ const About: FunctionComponent<any> = () => {
     }
   `);
 
-  const { title, desc } = data.site.siteMetadata.hero;
+  const { title, desc }: AboutData = data.site.siteMetadata.hero;
 
   return (
     <section className="page-section about-section" id="main">

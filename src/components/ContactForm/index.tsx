@@ -1,11 +1,11 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, ReactElement } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import { ContactSection, LoginInputSection } from '../../types/types';
 import "./styles.scss";
 
-const ContactForm: React.FC<any> = () => {
+const ContactForm: React.FC<React.FC> = (): ReactElement => {
 
-  const [loginInput, setLoginInput] = useReducer(
+  const [loginInput, setLoginInput]: LoginInputSection = useReducer(
     (state: any, newState: any) => ({ ...state, ...newState }),
     {
       namePlaceholder: "Name *",
@@ -17,7 +17,7 @@ const ContactForm: React.FC<any> = () => {
     }
   )
 
-  const handleLoginInput = (event:any) => {
+  const handleLoginInput = (event: any) => {
     const name = event.target.name;
     const value = event.target.value;
     setLoginInput({ [name]: value });
@@ -36,7 +36,7 @@ const ContactForm: React.FC<any> = () => {
 		}
 	`);
 
-  const { title, description } = data.site.siteMetadata.contactSection;
+  const { title, description }: ContactSection = data.site.siteMetadata.contactSection;
 
   return (
     <div className="wrapper">
