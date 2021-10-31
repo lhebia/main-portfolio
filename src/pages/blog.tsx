@@ -15,6 +15,7 @@ import {
 } from '../styles/globalStyles';
 import Head from '../components/Head';
 import HeroSplash from '../components/HeroSplash';
+import bloghandsmallA from '../assets/bloghandsmallA.jpg';
 
 const BlogUl = styled.ul`
   text-align: left;
@@ -76,7 +77,9 @@ const Blog: React.FC<any> = () => {
   return (
     <Layout>
       <Head title="Blog" />
-      <HeroSplash pageType="blog" />
+      <HeroSplash 
+        background={bloghandsmallA}
+      />
       <Wrapper>
         <PageSection
           id="main"
@@ -97,7 +100,7 @@ const Blog: React.FC<any> = () => {
           `}>A blog, written by me, about web development, parenting, <span role="img" aria-label="Burger">🍔,</span> and whatever else is on my mind.</p>
           <BlogUl>
             {
-              posts.map(post => {
+              posts.map((post:any) => {
                 return (
                   <BlogLi key={post.node.slug}>
                     <Link

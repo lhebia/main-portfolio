@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { ContactSection, LoginInputSection } from '../../types/types';
 import "./styles.scss";
 
-const ContactForm: React.FC<React.FC> = (): ReactElement => {
+const ContactForm: React.FC<any> = (): ReactElement => {
 
   const [loginInput, setLoginInput]: LoginInputSection = useReducer(
     (state: any, newState: any) => ({ ...state, ...newState }),

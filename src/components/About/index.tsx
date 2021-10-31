@@ -4,7 +4,7 @@ import SocialNav from '../SocialNav';
 import "./styles.scss";
 import { AboutData } from '../../types/types';
 
-const About: React.FC<React.FC> = (): ReactElement => {
+const About: React.FC<any> = (): ReactElement => {
 
   const data = useStaticQuery(graphql`
     query {

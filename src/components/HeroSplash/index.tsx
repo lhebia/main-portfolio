@@ -2,28 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-
 import { SplashSection, SplashTitle, SplashSubTitle, Wrapper } from '../../styles/globalStyles';
 import lightskyblue from '../../assets/lightskyblue.jpg';
 import bloghandsmallA from '../../assets/bloghandsmallA.jpg';
-
 import './styles.scss';
 
 interface HeroSplashProps {
-	pageType: string,
+	background: string,
 }
 
-const HeroSplash: React.FC<HeroSplashProps> = ({ pageType }) => {
-
-	const [background, setBackground] = useState('');
-
-	useEffect(() => {
-		if (pageType === 'blog') {
-			setBackground(bloghandsmallA);
-		} else {
-			setBackground(lightskyblue);
-		}
-	},[pageType])
+const HeroSplash: React.FC<HeroSplashProps> = ({ background }) => {
 	
 	const data = useStaticQuery(graphql`
 		query {
