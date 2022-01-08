@@ -10,7 +10,7 @@ const NotFound = () => {
       <>
         <Head title="Not Found" />
         <div className="flex flex-align-center not-found-element">
-          <p className="extra-large-number tech-stack-font">404</p>
+          <p className="extra-large-number tech-stack-font">4🍔4</p>
           <h1>Page Not Found | <Link to="/">Home</Link></h1>
         </div>
       </>
