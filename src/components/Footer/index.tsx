@@ -21,11 +21,11 @@ const Footer: React.FC<React.FC> = (): ReactElement => {
   return (
     <footer className="footer-style">
       <div className="wrapper footer-wrap">
-        <SocialNav flexJustification="flex-start"/>
         <p className="footer-text">
           { footerText } <span role="img" aria-label="Maple Leaf">🍁</span>
           {' '}&copy; { new Date().getFullYear() }
         </p>
+        <SocialNav flexJustification="flex-start"/>
       </div>
     </footer>
   )
