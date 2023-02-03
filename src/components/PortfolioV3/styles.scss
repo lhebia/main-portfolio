@@ -1,0 +1,64 @@
+.portfoliov3 {
+    h1, p, span {
+    font-family: 'Source Sans Pro', -apple-system, sans-serif;
+    color: #100b00;
+  }
+}
+
+.full-page {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Source Sans Pro', -apple-system, sans-serif;
+  color: #100b00;
+}
+
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+.portfolio-container {
+  font-weight: 100;
+
+  h1, p {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  span {
+    margin-top: 0.5rem;
+    line-height: 1.6rem;
+  }
+
+  p {
+    margin-top: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  p > a {
+    border-bottom: solid 1px #ddd;
+  }
+
+  .main-logo-img {
+    margin-right: 1rem;
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    left: -4rem;
+  }
+
+  .inner-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+  }
+
+  ul, l1:first-of-type {
+    padding-left: 0rem;
+  }
+}

@@ -49,8 +49,16 @@
   &-align-center {
     align-items: center;
   }
+
+  &-column {
+    flex-direction: column;
+  }
 }
 
 .text-centered {
   text-align: center;
+}
+
+.relative {
+  position: relative;
 }
