@@ -18,6 +18,13 @@ const SocialNav: FunctionComponent<SocialNavProps> = ({
           padding: 0.75rem;
           font-size: 1.5rem;
       }
+      li:first-of-type {
+        padding-left: 0rem;
+      }
+      li:hover {
+        transform: scale(1.1);
+        transition: 0.1s ease;
+      }
   `;
 
   return (
