@@ -15,13 +15,13 @@ import {
 } from '../styles/globalStyles';
 import Head from '../components/Head';
 import HeroSplash from '../components/HeroSplash';
+import bloghandsmallA from '../assets/bloghandsmallA.jpg';
 
 const BlogUl = styled.ul`
   text-align: left;
 `;
 
 const BlogLi = styled.li`
-  padding: 1rem;
   width: 60%;
   margin: 2rem auto;
   border: ${S.border};
@@ -65,6 +65,11 @@ const Blog: React.FC<any> = () => {
             description
             slug
             publishedDate(formatString: "MMMM Do, YYYY")
+            leadImage {
+              file {
+                url
+              }
+            }
           }
         }
       }
@@ -76,7 +81,9 @@ const Blog: React.FC<any> = () => {
   return (
     <Layout>
       <Head title="Blog" />
-      <HeroSplash pageType="blog" />
+      <HeroSplash 
+        background={bloghandsmallA}
+      />
       <Wrapper>
         <PageSection
           id="main"
@@ -97,24 +104,58 @@ const Blog: React.FC<any> = () => {
           `}>A blog, written by me, about web development, parenting, <span role="img" aria-label="Burger">🍔,</span> and whatever else is on my mind.</p>
           <BlogUl>
             {
-              posts.map(post => {
+              posts.map((post:any) => {
+                const imageUrl = post.node.leadImage?.file.url;
                 return (
                   <BlogLi key={post.node.slug}>
-                    <Link
-                      to={`/blog/${post.node.slug}`}
-                    >
-                      <BlogTitle>{post.node.title}</BlogTitle>
-                    </Link>
-                    <TitleDate>
-                      {post.node.publishedDate}
-                    </TitleDate>
-                    <BlogDescription>{post.node.description}</BlogDescription>
-                    <Link
-                      to={`/blog/${post.node.slug}`}
-                      key={post.node.slug}
-                    >
-                      <p>Read post</p>
-                    </Link>
+                    <div>
+                      <div css={css`
+                        border-radius: 5px 5px 0 0;
+                        overflow: hidden;
+                        max-height: 350px;
+                      `}>
+                        <Link
+                          to={`/blog/${post.node.slug}`}
+                        >
+                          <img 
+                            src={imageUrl} 
+                            alt={post.node.description} 
+                            css={
+                              css`
+                                max-height: 400px;
+                                width: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                                transition: all 0.6s;
+                                &:hover {
+                                  transform: scale(1.1);
+                                  opacity: 0.46;
+                                }
+                              `
+                            }
+                          />
+                        </Link>
+                      </div>
+                      <div css={css`
+                        padding: 1rem;
+                      `}>
+                        <Link
+                          to={`/blog/${post.node.slug}`}
+                        >
+                          <BlogTitle>{post.node.title}</BlogTitle>
+                        </Link>
+                        <TitleDate>
+                          {post.node.publishedDate}
+                        </TitleDate>
+                        <BlogDescription>{post.node.description}</BlogDescription>
+                        <Link
+                          to={`/blog/${post.node.slug}`}
+                          key={post.node.slug}
+                        >
+                          <p>Read post</p>
+                        </Link>
+                      </div>
+                    </div>
                   </BlogLi>
                 )
               })

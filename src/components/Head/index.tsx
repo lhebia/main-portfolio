@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import { HeadProps } from '../../types/types';
 
-export interface HeadProps {
-  title: string,
-}
-
-const Head: React.FC<HeadProps> = ({ title }) => {
+const Head: React.FC<HeadProps> = ({ title }): ReactElement => {
     
   const data = useStaticQuery(graphql`
     query {

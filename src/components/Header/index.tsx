@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactElement } from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-
 import dp36 from '../../assets/dp36.png';
-
 import "./styles.scss";
+import { HeaderData, HeaderProps, TopNavLinks } from '../../types/types';
 
-interface HeaderProps {
-  light?: boolean,
-}
-
-const Header: React.FC<HeaderProps> = ({ light = false }) => {
+const Header: React.FC<HeaderProps> = ({ light = false }): ReactElement => {
 
   const [styleClass, setStyleClass] = useState('');
 
@@ -51,8 +46,8 @@ const Header: React.FC<HeaderProps> = ({ light = false }) => {
     }
   `);
 
-  const { title, topNavLinks } = data.site.siteMetadata;
-  const { blog, contact, portfolio } = topNavLinks;
+  const { title, topNavLinks }: HeaderData = data.site.siteMetadata;
+  const { blog, contact, portfolio }: TopNavLinks = topNavLinks;
 
   return (
     <header className={ "flexed-header" + styleClass }>

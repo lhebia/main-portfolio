@@ -1,10 +1,10 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled"
 
 export const Wrapper = styled.div`
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-`;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+`
 
 export const siteVars = {
   mainText: "#100b00",
@@ -14,11 +14,11 @@ export const siteVars = {
   boxShadow: "0px 10px 20px 0px rgba(0,0,0,0.05)",
   border: "1px solid #ededed",
   borderRadius: "5px",
-};
+}
 
 export const PageSection = styled.section`
   padding: 6rem 0rem;
-`;
+`
 
 export const BlogPageSection = styled.section`
   padding: 2rem 0;
@@ -29,7 +29,11 @@ export const BlogPageSection = styled.section`
     line-height: 2.5rem;
     padding-bottom: 0.5rem;
   }
-  h2, h3, h4, h5, h6 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 1.5rem;
     line-height: 2rem;
     padding: 0.5rem 0;
@@ -51,8 +55,8 @@ export const BlogPageSection = styled.section`
     }
   }
   code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
     background-color: ${siteVars.offWhite};
     line-height: 1.7rem;
   }
@@ -66,22 +70,22 @@ export const BlogPageSection = styled.section`
   blockquote p:first-of-type {
     font-size: 1.20112rem;
     line-height: 1.75rem;
-    color: hsla(0,0%,0%,0.59);
+    color: hsla(0, 0%, 0%, 0.59);
     padding: 0 0.5rem;
     font-style: italic;
-    border-left: 0.32813rem solid hsla(0,0%,0%,0.9);
+    border-left: 0.32813rem solid hsla(0, 0%, 0%, 0.9);
   }
   @media (max-width: 550px) {
     width: 100%;
   }
-`;
+`
 
 export const SectionHeader = styled.h4`
   font-size: 2.6rem;
   line-height: 3.2rem;
   padding-bottom: 0.5rem;
   text-align: center;
-`;
+`
 
 export const SectionSubHeader = styled.p`
   font-size: 1rem;
@@ -105,7 +109,7 @@ export const ButtonStyle = styled.button`
     border: 1px solid ${siteVars.mainHighlight};
     color: ${siteVars.mainHighlight};
   }
-`;
+`
 
 export const LinkLikeButton = styled.a`
   padding: 0.5rem 0.7rem;
@@ -122,13 +126,13 @@ export const LinkLikeButton = styled.a`
     border: 1px solid ${siteVars.mainHighlight};
     color: ${siteVars.mainHighlight};
   }
-`;
+`
 
 export const TechStack = styled.p`
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   line-height: 1.6rem;
   letter-spacing: 0.09rem;
-`;
+`
 
 export const SplashSection = styled.section`
   min-height: 100vh;
@@ -141,9 +145,10 @@ export const SplashSection = styled.section`
   align-items: center;
   padding: 0 10%;
   position: relative;
-`;
+`
 
 export const SplashTitle = styled.h1`
+  font-family: "Roboto Mono", monospace;
   font-size: 7rem;
   font-weight: 100;
   color: white;

@@ -37,9 +37,14 @@
 }
 
 .tech-stack {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   line-height: 1.6rem;
   letter-spacing: 0.09rem;
+}
+
+li a svg:hover {
+  scale: (1.2);
+  transition: all 0.1s ease-out;
 }
 
 // Helpers
@@ -49,8 +54,16 @@
   &-align-center {
     align-items: center;
   }
+
+  &-column {
+    flex-direction: column;
+  }
 }
 
 .text-centered {
   text-align: center;
+}
+
+.relative {
+  position: relative;
 }
