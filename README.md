@@ -31,4 +31,4 @@ To setup:
 ### `npm install`
 
 3. Start dev server
-### `npm run develop`
+### `npm start`
