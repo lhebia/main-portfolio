@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { SocialNavProps } from './types';
@@ -31,15 +31,6 @@ const SocialNav: FunctionComponent<SocialNavProps> = ({
     <FooterUl>
       <li>
         <a
-          href="mailto:lawrencehebia@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faEnvelope} />
-        </a>
-      </li>
-      <li>
-        <a
           href="https://github.com/lhebia"
           target="_blank"
           rel="noopener noreferrer"
@@ -49,20 +40,20 @@ const SocialNav: FunctionComponent<SocialNavProps> = ({
       </li>
       <li>
         <a
-          href="https://twitter.com/lhebia"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-      </li>
-      <li>
-        <a
           href="https://linkedin.com/in/lhebia"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+      </li>
+      <li>
+        <a
+          href="mailto:lawrencehebia@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faEnvelope} />
         </a>
       </li>
     </FooterUl>
